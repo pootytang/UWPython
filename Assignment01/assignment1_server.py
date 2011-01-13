@@ -13,5 +13,14 @@ s.listen(backlog)
 while True: 
     client, address = s.accept()
     data = client.recv(size) 
-    print data
+
+    #Data should be an int followed by space followed by another int
+    l = data.split(' ')
+    val = 0
+    for i in l:
+        val = val + int(i)
+
+    print 'connection from: %s:%d' % address
+    print 'responding with: %d' % val
+    client.send(str(val))
     client.close()
