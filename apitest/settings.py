@@ -1,10 +1,14 @@
 # Django settings for apitest project.
 
+POLLDADDY_API_KEY = '6a979c9d-ee14-4a89-1340-00006ef88da6' # API key for polldaddy
+POLLDADDY_REQUEST_URL = 'https://api.polldaddy.com/'
+
+
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
-    # ('Your Name', 'your_email@domain.com'),
+    ('Delane Jackson', 'delane.jackson@gmail.com'),
 )
 
 MANAGERS = ADMINS
@@ -27,7 +31,7 @@ DATABASES = {
 # timezone as the operating system.
 # If running in a Windows environment this must be set to the same as your
 # system time zone.
-TIME_ZONE = 'America/Chicago'
+TIME_ZONE = 'America/Los_Angeles'
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
