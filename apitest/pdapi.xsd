@@ -1,0 +1,2028 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:pd="http://api.polldaddy.com/pdapi.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:mstns="http://api.polldaddy.com/pdapi.xsd" id="pdapi" targetNamespace="http://api.polldaddy.com/pdapi.xsd" elementFormDefault="qualified">
+	<xs:element name="pdInitiate">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Email">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="80"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="Password">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:maxLength value="30"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="partnerGUID" type="xs:string" use="required"/>
+			<xs:attribute name="partnerUserID" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="pdAccess">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="demands">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element maxOccurs="unbounded" name="demand">
+								<xs:complexType>
+									<xs:sequence minOccurs="0">
+										<xs:element name="account">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="userName" type="xs:string"/>
+													<xs:element name="email" type="xs:string"/>
+													<xs:element name="password" type="xs:string"/>
+													<xs:element name="firstName" type="xs:string"/>
+													<xs:element name="lastName" type="xs:string"/>
+													<xs:element name="countryCode">
+														<xs:simpleType>
+															<xs:restriction base="xs:string">
+																<xs:minLength value="2"/>
+																<xs:maxLength value="2"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+													<xs:element name="gender">
+														<xs:simpleType>
+															<xs:restriction base="xs:string">
+																<xs:pattern value="male|female"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+													<xs:element name="yearOfBirth">
+														<xs:simpleType>
+															<xs:restriction base="xs:unsignedInt">
+																<xs:minExclusive value="1900"/>
+																<xs:maxExclusive value="2007"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+													<xs:element name="websiteURL" type="xs:string"/>
+													<xs:element name="avatarURL" type="xs:string"/>
+													<xs:element name="bio" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="id" type="xs:string" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="partnerGUID" type="xs:string" use="required"/>
+			<xs:attribute name="partnerUserID" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="pdRequest">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="userCode" type="xs:string"/>
+				<xs:element name="demands">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element maxOccurs="unbounded" name="demand">
+								<xs:complexType>
+									<xs:sequence minOccurs="0">
+										<xs:element minOccurs="0" name="account">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="userName" type="xs:string"/>
+													<xs:element name="email" type="xs:string"/>
+													<xs:element name="password" type="xs:string"/>
+													<xs:element name="firstName" type="xs:string"/>
+													<xs:element name="lastName" type="xs:string"/>
+													<xs:element name="countryCode">
+														<xs:simpleType>
+															<xs:restriction base="xs:string">
+																<xs:minLength value="2"/>
+																<xs:maxLength value="2"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+													<xs:element name="gender">
+														<xs:simpleType>
+															<xs:restriction base="xs:string">
+																<xs:pattern value="male|female"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+													<xs:element name="yearOfBirth">
+														<xs:simpleType>
+															<xs:restriction base="xs:unsignedInt">
+																<xs:minExclusive value="1900"/>
+																<xs:maxExclusive value="2007"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+													<xs:element name="websiteURL" type="xs:string"/>
+													<xs:element name="avatarURL" type="xs:string"/>
+													<xs:element name="bio" type="xs:string"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="poll">
+											<xs:complexType>
+												<xs:sequence minOccurs="0">
+													<xs:element name="question" type="xs:string"/>
+													<xs:element name="multipleChoice">
+														<xs:simpleType>
+															<xs:restriction base="xs:string">
+																<xs:pattern value="yes|no"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+													<xs:element name="randomiseAnswers">
+														<xs:simpleType>
+															<xs:restriction base="xs:string">
+																<xs:pattern value="yes|no"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+													<xs:element name="otherAnswer">
+														<xs:simpleType>
+															<xs:restriction base="xs:string">
+																<xs:pattern value="yes|no"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+													<xs:element name="resultsType">
+														<xs:simpleType>
+															<xs:restriction base="xs:string">
+																<xs:pattern value="show|percent|hide"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+													<xs:element name="blockRepeatVotersType">
+														<xs:simpleType>
+															<xs:restriction base="xs:string">
+																<xs:pattern value="off|cookie|cookieIP"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+													<xs:element name="comments">
+														<xs:simpleType>
+															<xs:restriction base="xs:string">
+																<xs:pattern value="allow|moderate|off"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+													<xs:element name="makePublic">
+														<xs:simpleType>
+															<xs:restriction base="xs:string">
+																<xs:pattern value="yes|no"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+													<xs:element name="closePoll">
+														<xs:simpleType>
+															<xs:restriction base="xs:string">
+																<xs:pattern value="yes|no"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+													<xs:element name="closePollNow">
+														<xs:simpleType>
+															<xs:restriction base="xs:string">
+																<xs:pattern value="yes|no"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+													<xs:element name="closeDate" type="xs:dateTime"/>
+													<xs:element name="styleID" type="xs:int" default="0"/>
+													<xs:element name="packID" type="xs:unsignedInt" default="0"/>
+													<xs:element name="folderID" type="xs:unsignedInt" default="0"/>
+													<xs:element name="languageID" type="xs:unsignedInt" default="0"/>
+													<xs:element minOccurs="0" name="mediaType" type="xs:int" default="0"/>
+													<xs:element minOccurs="0" name="mediaCode" type="xs:string" default=""/>
+													<xs:element minOccurs="0" name="parentID" type="xs:unsignedLong" default="0"/>
+													<xs:element name="answers">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element minOccurs="2" maxOccurs="99" name="answer">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element name="text" type="xs:string" minOccurs="0"/>
+																			<xs:element name="mediaCode" type="xs:string" minOccurs="0"/>
+																			<xs:element name="mediaType" type="xs:unsignedInt" minOccurs="0"/>
+																		</xs:sequence>
+																		<xs:attribute name="id" type="xs:unsignedInt" use="optional"/>
+																		<xs:attribute name="mediaType" type="xs:unsignedInt" use="optional"/>
+																		<xs:attribute name="mediaCode" type="xs:string" use="optional"/>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="id" type="xs:unsignedInt" use="optional"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="result">
+											<xs:complexType>
+												<xs:simpleContent>
+													<xs:extension base="xs:string">
+														<xs:attribute name="id" type="xs:unsignedInt" use="required"/>
+														<xs:attribute name="start" type="xs:unsignedInt" use="optional"/>
+														<xs:attribute name="end" type="xs:unsignedInt" use="optional"/>
+													</xs:extension>
+												</xs:simpleContent>
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="comments">
+											<xs:complexType>
+												<xs:sequence minOccurs="0">
+													<xs:element minOccurs="0" name="comment">
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="xs:string">
+																	<xs:attribute name="id" type="xs:unsignedInt" use="required"/>
+																	<xs:attribute name="method" type="xs:unsignedInt" use="required"/>
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="id" type="xs:unsignedInt" use="optional"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="style">
+											<xs:complexType>
+												<xs:sequence minOccurs="0">
+													<xs:element name="title" type="xs:string"/>
+													<xs:element form="unqualified" name="data">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element form="unqualified" name="pds-box">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element form="unqualified" name="background">
+																				<xs:complexType>
+																					<xs:attribute name="background-color" type="xs:string" use="required"/>
+																					<xs:attribute name="background-image" type="xs:string" use="required"/>
+																					<xs:attribute name="background-repeat" type="xs:string" use="required"/>
+																					<xs:attribute name="background-position" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="border">
+																				<xs:complexType>
+																					<xs:attribute name="border-width" type="xs:string" use="required"/>
+																					<xs:attribute name="border-style" type="xs:string" use="required"/>
+																					<xs:attribute name="border-color" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="margin">
+																				<xs:complexType>
+																					<xs:attribute name="margin-top" type="xs:string" use="required"/>
+																					<xs:attribute name="margin-right" type="xs:string" use="required"/>
+																					<xs:attribute name="margin-bottom" type="xs:string" use="required"/>
+																					<xs:attribute name="margin-left" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="padding">
+																				<xs:complexType>
+																					<xs:attribute name="padding-top" type="xs:string" use="required"/>
+																					<xs:attribute name="padding-right" type="xs:string" use="required"/>
+																					<xs:attribute name="padding-bottom" type="xs:string" use="required"/>
+																					<xs:attribute name="padding-left" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="scale">
+																				<xs:complexType>
+																					<xs:attribute name="width" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element form="unqualified" name="pds-question-top">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element form="unqualified" name="font">
+																				<xs:complexType>
+																					<xs:attribute name="font-style" type="xs:string" use="required"/>
+																					<xs:attribute name="line-height" type="xs:string" use="required"/>
+																					<xs:attribute name="font-weight" type="xs:string" use="required"/>
+																					<xs:attribute name="font-family" type="xs:string" use="required"/>
+																					<xs:attribute name="font-size" type="xs:string" use="required"/>
+																					<xs:attribute name="text-decoration" type="xs:string" use="required"/>
+																					<xs:attribute name="color" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="border">
+																				<xs:complexType>
+																					<xs:attribute name="border-width" type="xs:string" use="required"/>
+																					<xs:attribute name="border-style" type="xs:string" use="required"/>
+																					<xs:attribute name="border-color" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="background">
+																				<xs:complexType>
+																					<xs:attribute name="background-color" type="xs:string" use="required"/>
+																					<xs:attribute name="background-image" type="xs:string" use="required"/>
+																					<xs:attribute name="background-repeat" type="xs:string" use="required"/>
+																					<xs:attribute name="background-position" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="margin">
+																				<xs:complexType>
+																					<xs:attribute name="margin-top" type="xs:string" use="required"/>
+																					<xs:attribute name="margin-right" type="xs:string" use="required"/>
+																					<xs:attribute name="margin-bottom" type="xs:string" use="required"/>
+																					<xs:attribute name="margin-left" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="padding">
+																				<xs:complexType>
+																					<xs:attribute name="padding-top" type="xs:string" use="required"/>
+																					<xs:attribute name="padding-right" type="xs:string" use="required"/>
+																					<xs:attribute name="padding-bottom" type="xs:string" use="required"/>
+																					<xs:attribute name="padding-left" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element form="unqualified" name="pds-answer">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element form="unqualified" name="font">
+																				<xs:complexType>
+																					<xs:attribute name="font-style" type="xs:string" use="required"/>
+																					<xs:attribute name="line-height" type="xs:string" use="required"/>
+																					<xs:attribute name="font-weight" type="xs:string" use="required"/>
+																					<xs:attribute name="font-family" type="xs:string" use="required"/>
+																					<xs:attribute name="font-size" type="xs:string" use="required"/>
+																					<xs:attribute name="text-decoration" type="xs:string" use="required"/>
+																					<xs:attribute name="color" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="background">
+																				<xs:complexType>
+																					<xs:attribute name="background-color" type="xs:string" use="required"/>
+																					<xs:attribute name="background-image" type="xs:string" use="required"/>
+																					<xs:attribute name="background-repeat" type="xs:string" use="required"/>
+																					<xs:attribute name="background-position" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="border">
+																				<xs:complexType>
+																					<xs:attribute name="border-width" type="xs:string" use="required"/>
+																					<xs:attribute name="border-style" type="xs:string" use="required"/>
+																					<xs:attribute name="border-color" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="margin">
+																				<xs:complexType>
+																					<xs:attribute name="margin-top" type="xs:string" use="required"/>
+																					<xs:attribute name="margin-right" type="xs:string" use="required"/>
+																					<xs:attribute name="margin-bottom" type="xs:string" use="required"/>
+																					<xs:attribute name="margin-left" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="padding">
+																				<xs:complexType>
+																					<xs:attribute name="padding-top" type="xs:string" use="required"/>
+																					<xs:attribute name="padding-right" type="xs:string" use="required"/>
+																					<xs:attribute name="padding-bottom" type="xs:string" use="required"/>
+																					<xs:attribute name="padding-left" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element form="unqualified" name="pds-textfield">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element form="unqualified" name="font">
+																				<xs:complexType>
+																					<xs:attribute name="font-style" type="xs:string" use="required"/>
+																					<xs:attribute name="font-family" type="xs:string" use="required"/>
+																					<xs:attribute name="line-height" type="xs:string" use="required"/>
+																					<xs:attribute name="font-weight" type="xs:string" use="required"/>
+																					<xs:attribute name="font-size" type="xs:string" use="required"/>
+																					<xs:attribute name="text-decoration" type="xs:string" use="required"/>
+																					<xs:attribute name="color" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="background">
+																				<xs:complexType>
+																					<xs:attribute name="background-color" type="xs:string" use="required"/>
+																					<xs:attribute name="background-image" type="xs:string" use="required"/>
+																					<xs:attribute name="background-repeat" type="xs:string" use="required"/>
+																					<xs:attribute name="background-position" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="border">
+																				<xs:complexType>
+																					<xs:attribute name="border-width" type="xs:string" use="required"/>
+																					<xs:attribute name="border-style" type="xs:string" use="required"/>
+																					<xs:attribute name="border-color" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="margin">
+																				<xs:complexType>
+																					<xs:attribute name="margin-top" type="xs:string" use="required"/>
+																					<xs:attribute name="margin-right" type="xs:string" use="required"/>
+																					<xs:attribute name="margin-bottom" type="xs:string" use="required"/>
+																					<xs:attribute name="margin-left" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="padding">
+																				<xs:complexType>
+																					<xs:attribute name="padding-top" type="xs:string" use="required"/>
+																					<xs:attribute name="padding-right" type="xs:string" use="required"/>
+																					<xs:attribute name="padding-bottom" type="xs:string" use="required"/>
+																					<xs:attribute name="padding-left" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="scale">
+																				<xs:complexType>
+																					<xs:attribute name="width" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element form="unqualified" name="pds-answer-feedback">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element form="unqualified" name="background">
+																				<xs:complexType>
+																					<xs:attribute name="background-color" type="xs:string" use="required"/>
+																					<xs:attribute name="background-image" type="xs:string" use="required"/>
+																					<xs:attribute name="background-repeat" type="xs:string" use="required"/>
+																					<xs:attribute name="background-position" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="border">
+																				<xs:complexType>
+																					<xs:attribute name="border-width" type="xs:string" use="required"/>
+																					<xs:attribute name="border-style" type="xs:string" use="required"/>
+																					<xs:attribute name="border-color" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="padding">
+																				<xs:complexType>
+																					<xs:attribute name="padding-top" type="xs:string" use="required"/>
+																					<xs:attribute name="padding-right" type="xs:string" use="required"/>
+																					<xs:attribute name="padding-bottom" type="xs:string" use="required"/>
+																					<xs:attribute name="padding-left" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="margin">
+																				<xs:complexType>
+																					<xs:attribute name="margin-top" type="xs:string" use="required"/>
+																					<xs:attribute name="margin-right" type="xs:string" use="required"/>
+																					<xs:attribute name="margin-bottom" type="xs:string" use="required"/>
+																					<xs:attribute name="margin-left" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element form="unqualified" name="pds-answer-feedback-bar">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element form="unqualified" name="background">
+																				<xs:complexType>
+																					<xs:attribute name="background-color" type="xs:string" use="required"/>
+																					<xs:attribute name="background-image" type="xs:string" use="required"/>
+																					<xs:attribute name="background-repeat" type="xs:string" use="required"/>
+																					<xs:attribute name="background-position" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="border">
+																				<xs:complexType>
+																					<xs:attribute name="border-width" type="xs:string" use="required"/>
+																					<xs:attribute name="border-style" type="xs:string" use="required"/>
+																					<xs:attribute name="border-color" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="padding">
+																				<xs:complexType>
+																					<xs:attribute name="padding-top" type="xs:string" use="required"/>
+																					<xs:attribute name="padding-right" type="xs:string" use="required"/>
+																					<xs:attribute name="padding-bottom" type="xs:string" use="required"/>
+																					<xs:attribute name="padding-left" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="margin">
+																				<xs:complexType>
+																					<xs:attribute name="margin-top" type="xs:string" use="required"/>
+																					<xs:attribute name="margin-right" type="xs:string" use="required"/>
+																					<xs:attribute name="margin-bottom" type="xs:string" use="required"/>
+																					<xs:attribute name="margin-left" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element form="unqualified" name="pds-totalvotes-inner">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element form="unqualified" name="font">
+																				<xs:complexType>
+																					<xs:attribute name="font-style" type="xs:string" use="required"/>
+																					<xs:attribute name="font-family" type="xs:string" use="required"/>
+																					<xs:attribute name="line-height" type="xs:string" use="required"/>
+																					<xs:attribute name="font-weight" type="xs:string" use="required"/>
+																					<xs:attribute name="font-size" type="xs:string" use="required"/>
+																					<xs:attribute name="text-decoration" type="xs:string" use="required"/>
+																					<xs:attribute name="color" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="background">
+																				<xs:complexType>
+																					<xs:attribute name="background-color" type="xs:string" use="required"/>
+																					<xs:attribute name="background-image" type="xs:string" use="required"/>
+																					<xs:attribute name="background-repeat" type="xs:string" use="required"/>
+																					<xs:attribute name="background-position" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="border">
+																				<xs:complexType>
+																					<xs:attribute name="border-width" type="xs:string" use="required"/>
+																					<xs:attribute name="border-style" type="xs:string" use="required"/>
+																					<xs:attribute name="border-color" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="padding">
+																				<xs:complexType>
+																					<xs:attribute name="padding-top" type="xs:string" use="required"/>
+																					<xs:attribute name="padding-right" type="xs:string" use="required"/>
+																					<xs:attribute name="padding-bottom" type="xs:string" use="required"/>
+																					<xs:attribute name="padding-left" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="id" type="xs:unsignedInt" use="optional"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="pack">
+											<xs:complexType>
+												<xs:sequence minOccurs="0">
+													<xs:element form="unqualified" name="pack">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element form="unqualified" name="title" type="xs:string"/>
+																<xs:element maxOccurs="unbounded" form="unqualified" name="phrase">
+																	<xs:complexType>
+																		<xs:simpleContent>
+																			<xs:extension base="xs:string">
+																				<xs:attribute name="phraseID" type="xs:unsignedInt" use="required"/>
+																			</xs:extension>
+																		</xs:simpleContent>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+															<xs:attribute name="type" type="xs:string" use="required"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="id" type="xs:unsignedInt" use="optional"/>
+												<xs:attribute name="date" type="xs:string" use="optional"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="search" type="xs:string"/>
+										<xs:element minOccurs="0" name="activity" type="xs:string"/>
+										<xs:element minOccurs="0" name="list">
+											<xs:complexType>
+												<xs:attribute name="start" type="xs:unsignedInt" use="required"/>
+												<xs:attribute name="end" type="xs:unsignedInt" use="required"/>
+												<xs:attribute name="id" type="xs:unsignedInt" use="optional"/>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="id" type="xs:string"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="partnerGUID" type="xs:string" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="pdResponse">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="userCode" type="xs:string"/>
+				<xs:element name="demands">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element maxOccurs="unbounded" name="demand">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element minOccurs="0" name="account">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="userName" type="xs:string"/>
+													<xs:element name="email" type="xs:string"/>
+													<xs:element name="password" type="xs:string"/>
+													<xs:element name="firstName" type="xs:string"/>
+													<xs:element name="lastName" type="xs:string"/>
+													<xs:element name="countryCode" type="xs:string"/>
+													<xs:element name="gender" type="xs:string"/>
+													<xs:element name="yearOfBirth" type="xs:unsignedInt"/>
+													<xs:element name="websiteURL" type="xs:string"/>
+													<xs:element name="avatarURL" type="xs:string"/>
+													<xs:element name="bio" type="xs:string"/>
+												</xs:sequence>
+												<xs:attribute name="id" type="xs:unsignedInt" use="required"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="surveys">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element maxOccurs="unbounded" name="survey">
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="xs:string">
+																	<xs:attribute name="id" type="xs:unsignedInt" use="required"/>
+																	<xs:attribute name="created" type="xs:string" use="required"/>
+																	<xs:attribute name="responses" type="xs:unsignedInt" use="required"/>
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="polls">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element minOccurs="0" maxOccurs="unbounded" name="poll">
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="xs:string">
+																	<xs:attribute name="id" type="xs:unsignedInt" use="required"/>
+																	<xs:attribute name="owner" type="xs:string" use="optional"/>
+																	<xs:attribute name="created" type="xs:string" use="required"/>
+																	<xs:attribute name="responses" type="xs:unsignedInt" use="required"/>
+																	<xs:attribute name="folderID" type="xs:unsignedInt" use="required"/>
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="total" type="xs:unsignedInt" use="optional"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="poll">
+											<xs:complexType>
+												<xs:sequence minOccurs="0">
+													<xs:element name="question" type="xs:string"/>
+													<xs:element name="multipleChoice">
+														<xs:simpleType>
+															<xs:restriction base="xs:string">
+																<xs:pattern value="yes|no"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+													<xs:element name="randomiseAnswers">
+														<xs:simpleType>
+															<xs:restriction base="xs:string">
+																<xs:pattern value="yes|no"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+													<xs:element name="otherAnswer">
+														<xs:simpleType>
+															<xs:restriction base="xs:string">
+																<xs:pattern value="yes|no"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+													<xs:element name="resultsType">
+														<xs:simpleType>
+															<xs:restriction base="xs:string">
+																<xs:pattern value="show|percent|hide"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+													<xs:element name="blockRepeatVotersType">
+														<xs:simpleType>
+															<xs:restriction base="xs:string">
+																<xs:pattern value="off|cookie|cookieIP"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+													<xs:element name="comments">
+														<xs:simpleType>
+															<xs:restriction base="xs:string">
+																<xs:pattern value="allow|moderate|off"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+													<xs:element name="makePublic">
+														<xs:simpleType>
+															<xs:restriction base="xs:string">
+																<xs:pattern value="yes|no"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+													<xs:element name="closePoll">
+														<xs:simpleType>
+															<xs:restriction base="xs:string">
+																<xs:pattern value="yes|no"/>
+															</xs:restriction>
+														</xs:simpleType>
+													</xs:element>
+													<xs:element name="closeDate" type="xs:string"/>
+													<xs:element name="styleID" type="xs:unsignedInt" default="0"/>
+													<xs:element name="packID" type="xs:unsignedInt" default="0"/>
+													<xs:element name="folderID" type="xs:unsignedInt" default="0"/>
+													<xs:element name="languageID" type="xs:unsignedInt" default="0"/>
+													<xs:element minOccurs="0" name="mediaType" type="xs:int" default="0"/>
+													<xs:element minOccurs="0" name="mediaCode" type="xs:string" default=""/>
+													<xs:element minOccurs="0" name="parentID" type="xs:unsignedLong" default="0"/>
+													<xs:element name="answers">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element minOccurs="2" maxOccurs="unbounded" name="answer">
+																	<xs:complexType>
+																		<xs:simpleContent>
+																			<xs:extension base="xs:string">
+																				<xs:attribute name="id" type="xs:unsignedInt" use="optional"/>
+																				<xs:attribute name="mediaType" type="xs:int" use="optional"/>
+																				<xs:attribute name="mediaCode" type="xs:string" use="optional"/>
+																			</xs:extension>
+																		</xs:simpleContent>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="id" type="xs:unsignedInt" use="optional"/>
+												<xs:attribute name="owner" type="xs:string" use="optional"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="result">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="answers">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element maxOccurs="unbounded" name="answer">
+																	<xs:complexType>
+																		<xs:simpleContent>
+																			<xs:extension base="xs:string">
+																				<xs:attribute name="id" type="xs:unsignedInt" use="required"/>
+																				<xs:attribute name="total" type="xs:unsignedInt" use="required"/>
+																				<xs:attribute name="percent" type="xs:decimal" use="required"/>
+																			</xs:extension>
+																		</xs:simpleContent>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<xs:element minOccurs="0" name="otherAnswers">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="otherAnswer" type="xs:string" minOccurs="0"/>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="id" type="xs:string" use="required"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="comments">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element minOccurs="0" name="comment">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element minOccurs="0" maxOccurs="1" name="poll">
+																	<xs:complexType>
+																		<xs:simpleContent>
+																			<xs:extension base="xs:string">
+																				<xs:attribute name="id" type="xs:unsignedInt" use="required"/>
+																			</xs:extension>
+																		</xs:simpleContent>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element name="name" type="xs:string"/>
+																<xs:element name="email" type="xs:string"/>
+																<xs:element name="text" type="xs:string"/>
+																<xs:element name="url" type="xs:string"/>
+																<xs:element name="date" type="xs:string"/>
+																<xs:element name="ip" type="xs:string" minOccurs="0"/>
+															</xs:sequence>
+															<xs:attribute name="id" type="xs:unsignedInt" use="required"/>
+															<xs:attribute name="type" type="xs:unsignedInt" use="required"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="id" type="xs:unsignedInt" use="optional"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="styles">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element minOccurs="0" maxOccurs="unbounded" name="style">
+														<xs:complexType>
+															<xs:sequence minOccurs="0">
+																<xs:element name="title" type="xs:string"/>
+																<xs:element name="date" type="xs:string"/>
+																<xs:element minOccurs="0" form="unqualified" name="data">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element form="unqualified" name="pds-box">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element form="unqualified" name="background">
+																							<xs:complexType>
+																								<xs:attribute name="background-color" type="xs:string" use="required"/>
+																								<xs:attribute name="background-image" type="xs:string" use="required"/>
+																								<xs:attribute name="background-repeat" type="xs:string" use="required"/>
+																								<xs:attribute name="background-position" type="xs:string" use="required"/>
+																							</xs:complexType>
+																						</xs:element>
+																						<xs:element form="unqualified" name="border">
+																							<xs:complexType>
+																								<xs:attribute name="border-width" type="xs:string" use="required"/>
+																								<xs:attribute name="border-style" type="xs:string" use="required"/>
+																								<xs:attribute name="border-color" type="xs:string" use="required"/>
+																							</xs:complexType>
+																						</xs:element>
+																						<xs:element form="unqualified" name="margin">
+																							<xs:complexType>
+																								<xs:attribute name="margin-top" type="xs:string" use="required"/>
+																								<xs:attribute name="margin-right" type="xs:string" use="required"/>
+																								<xs:attribute name="margin-bottom" type="xs:string" use="required"/>
+																								<xs:attribute name="margin-left" type="xs:string" use="required"/>
+																							</xs:complexType>
+																						</xs:element>
+																						<xs:element form="unqualified" name="padding">
+																							<xs:complexType>
+																								<xs:attribute name="padding-top" type="xs:string" use="required"/>
+																								<xs:attribute name="padding-right" type="xs:string" use="required"/>
+																								<xs:attribute name="padding-bottom" type="xs:string" use="required"/>
+																								<xs:attribute name="padding-left" type="xs:string" use="required"/>
+																							</xs:complexType>
+																						</xs:element>
+																						<xs:element form="unqualified" name="scale">
+																							<xs:complexType>
+																								<xs:attribute name="width" type="xs:string" use="required"/>
+																							</xs:complexType>
+																						</xs:element>
+																					</xs:sequence>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="pds-question-top">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element form="unqualified" name="font">
+																							<xs:complexType>
+																								<xs:attribute name="font-style" type="xs:string" use="required"/>
+																								<xs:attribute name="line-height" type="xs:string" use="required"/>
+																								<xs:attribute name="font-weight" type="xs:string" use="required"/>
+																								<xs:attribute name="font-family" type="xs:string" use="required"/>
+																								<xs:attribute name="font-size" type="xs:string" use="required"/>
+																								<xs:attribute name="text-decoration" type="xs:string" use="required"/>
+																								<xs:attribute name="color" type="xs:string" use="required"/>
+																							</xs:complexType>
+																						</xs:element>
+																						<xs:element form="unqualified" name="border">
+																							<xs:complexType>
+																								<xs:attribute name="border-width" type="xs:string" use="required"/>
+																								<xs:attribute name="border-style" type="xs:string" use="required"/>
+																								<xs:attribute name="border-color" type="xs:string" use="required"/>
+																							</xs:complexType>
+																						</xs:element>
+																						<xs:element form="unqualified" name="background">
+																							<xs:complexType>
+																								<xs:attribute name="background-color" type="xs:string" use="required"/>
+																								<xs:attribute name="background-image" type="xs:string" use="required"/>
+																								<xs:attribute name="background-repeat" type="xs:string" use="required"/>
+																								<xs:attribute name="background-position" type="xs:string" use="required"/>
+																							</xs:complexType>
+																						</xs:element>
+																						<xs:element form="unqualified" name="margin">
+																							<xs:complexType>
+																								<xs:attribute name="margin-top" type="xs:string" use="required"/>
+																								<xs:attribute name="margin-right" type="xs:string" use="required"/>
+																								<xs:attribute name="margin-bottom" type="xs:string" use="required"/>
+																								<xs:attribute name="margin-left" type="xs:string" use="required"/>
+																							</xs:complexType>
+																						</xs:element>
+																						<xs:element form="unqualified" name="padding">
+																							<xs:complexType>
+																								<xs:attribute name="padding-top" type="xs:string" use="required"/>
+																								<xs:attribute name="padding-right" type="xs:string" use="required"/>
+																								<xs:attribute name="padding-bottom" type="xs:string" use="required"/>
+																								<xs:attribute name="padding-left" type="xs:string" use="required"/>
+																							</xs:complexType>
+																						</xs:element>
+																					</xs:sequence>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="pds-answer">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element form="unqualified" name="font">
+																							<xs:complexType>
+																								<xs:attribute name="font-style" type="xs:string" use="required"/>
+																								<xs:attribute name="line-height" type="xs:string" use="required"/>
+																								<xs:attribute name="font-weight" type="xs:string" use="required"/>
+																								<xs:attribute name="font-family" type="xs:string" use="required"/>
+																								<xs:attribute name="font-size" type="xs:string" use="required"/>
+																								<xs:attribute name="text-decoration" type="xs:string" use="required"/>
+																								<xs:attribute name="color" type="xs:string" use="required"/>
+																							</xs:complexType>
+																						</xs:element>
+																						<xs:element form="unqualified" name="background">
+																							<xs:complexType>
+																								<xs:attribute name="background-color" type="xs:string" use="required"/>
+																								<xs:attribute name="background-image" type="xs:string" use="required"/>
+																								<xs:attribute name="background-repeat" type="xs:string" use="required"/>
+																								<xs:attribute name="background-position" type="xs:string" use="required"/>
+																							</xs:complexType>
+																						</xs:element>
+																						<xs:element form="unqualified" name="border">
+																							<xs:complexType>
+																								<xs:attribute name="border-width" type="xs:string" use="required"/>
+																								<xs:attribute name="border-style" type="xs:string" use="required"/>
+																								<xs:attribute name="border-color" type="xs:string" use="required"/>
+																							</xs:complexType>
+																						</xs:element>
+																						<xs:element form="unqualified" name="margin">
+																							<xs:complexType>
+																								<xs:attribute name="margin-top" type="xs:string" use="required"/>
+																								<xs:attribute name="margin-right" type="xs:string" use="required"/>
+																								<xs:attribute name="margin-bottom" type="xs:string" use="required"/>
+																								<xs:attribute name="margin-left" type="xs:string" use="required"/>
+																							</xs:complexType>
+																						</xs:element>
+																						<xs:element form="unqualified" name="padding">
+																							<xs:complexType>
+																								<xs:attribute name="padding-top" type="xs:string" use="required"/>
+																								<xs:attribute name="padding-right" type="xs:string" use="required"/>
+																								<xs:attribute name="padding-bottom" type="xs:string" use="required"/>
+																								<xs:attribute name="padding-left" type="xs:string" use="required"/>
+																							</xs:complexType>
+																						</xs:element>
+																					</xs:sequence>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="pds-textfield">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element form="unqualified" name="font">
+																							<xs:complexType>
+																								<xs:attribute name="font-style" type="xs:string" use="required"/>
+																								<xs:attribute name="font-family" type="xs:string" use="required"/>
+																								<xs:attribute name="line-height" type="xs:string" use="required"/>
+																								<xs:attribute name="font-weight" type="xs:string" use="required"/>
+																								<xs:attribute name="font-size" type="xs:string" use="required"/>
+																								<xs:attribute name="text-decoration" type="xs:string" use="required"/>
+																								<xs:attribute name="color" type="xs:string" use="required"/>
+																							</xs:complexType>
+																						</xs:element>
+																						<xs:element form="unqualified" name="background">
+																							<xs:complexType>
+																								<xs:attribute name="background-color" type="xs:string" use="required"/>
+																								<xs:attribute name="background-image" type="xs:string" use="required"/>
+																								<xs:attribute name="background-repeat" type="xs:string" use="required"/>
+																								<xs:attribute name="background-position" type="xs:string" use="required"/>
+																							</xs:complexType>
+																						</xs:element>
+																						<xs:element form="unqualified" name="border">
+																							<xs:complexType>
+																								<xs:attribute name="border-width" type="xs:string" use="required"/>
+																								<xs:attribute name="border-style" type="xs:string" use="required"/>
+																								<xs:attribute name="border-color" type="xs:string" use="required"/>
+																							</xs:complexType>
+																						</xs:element>
+																						<xs:element form="unqualified" name="margin">
+																							<xs:complexType>
+																								<xs:attribute name="margin-top" type="xs:string" use="required"/>
+																								<xs:attribute name="margin-right" type="xs:string" use="required"/>
+																								<xs:attribute name="margin-bottom" type="xs:string" use="required"/>
+																								<xs:attribute name="margin-left" type="xs:string" use="required"/>
+																							</xs:complexType>
+																						</xs:element>
+																						<xs:element form="unqualified" name="padding">
+																							<xs:complexType>
+																								<xs:attribute name="padding-top" type="xs:string" use="required"/>
+																								<xs:attribute name="padding-right" type="xs:string" use="required"/>
+																								<xs:attribute name="padding-bottom" type="xs:string" use="required"/>
+																								<xs:attribute name="padding-left" type="xs:string" use="required"/>
+																							</xs:complexType>
+																						</xs:element>
+																						<xs:element form="unqualified" name="scale">
+																							<xs:complexType>
+																								<xs:attribute name="width" type="xs:string" use="required"/>
+																							</xs:complexType>
+																						</xs:element>
+																					</xs:sequence>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="pds-answer-feedback">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element form="unqualified" name="background">
+																							<xs:complexType>
+																								<xs:attribute name="background-color" type="xs:string" use="required"/>
+																								<xs:attribute name="background-image" type="xs:string" use="required"/>
+																								<xs:attribute name="background-repeat" type="xs:string" use="required"/>
+																								<xs:attribute name="background-position" type="xs:string" use="required"/>
+																							</xs:complexType>
+																						</xs:element>
+																						<xs:element form="unqualified" name="border">
+																							<xs:complexType>
+																								<xs:attribute name="border-width" type="xs:string" use="required"/>
+																								<xs:attribute name="border-style" type="xs:string" use="required"/>
+																								<xs:attribute name="border-color" type="xs:string" use="required"/>
+																							</xs:complexType>
+																						</xs:element>
+																						<xs:element form="unqualified" name="padding">
+																							<xs:complexType>
+																								<xs:attribute name="padding-top" type="xs:string" use="required"/>
+																								<xs:attribute name="padding-right" type="xs:string" use="required"/>
+																								<xs:attribute name="padding-bottom" type="xs:string" use="required"/>
+																								<xs:attribute name="padding-left" type="xs:string" use="required"/>
+																							</xs:complexType>
+																						</xs:element>
+																						<xs:element form="unqualified" name="margin">
+																							<xs:complexType>
+																								<xs:attribute name="margin-top" type="xs:string" use="required"/>
+																								<xs:attribute name="margin-right" type="xs:string" use="required"/>
+																								<xs:attribute name="margin-bottom" type="xs:string" use="required"/>
+																								<xs:attribute name="margin-left" type="xs:string" use="required"/>
+																							</xs:complexType>
+																						</xs:element>
+																					</xs:sequence>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="pds-answer-feedback-bar">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element form="unqualified" name="background">
+																							<xs:complexType>
+																								<xs:attribute name="background-color" type="xs:string" use="required"/>
+																								<xs:attribute name="background-image" type="xs:string" use="required"/>
+																								<xs:attribute name="background-repeat" type="xs:string" use="required"/>
+																								<xs:attribute name="background-position" type="xs:string" use="required"/>
+																							</xs:complexType>
+																						</xs:element>
+																						<xs:element form="unqualified" name="border">
+																							<xs:complexType>
+																								<xs:attribute name="border-width" type="xs:string" use="required"/>
+																								<xs:attribute name="border-style" type="xs:string" use="required"/>
+																								<xs:attribute name="border-color" type="xs:string" use="required"/>
+																							</xs:complexType>
+																						</xs:element>
+																						<xs:element form="unqualified" name="padding">
+																							<xs:complexType>
+																								<xs:attribute name="padding-top" type="xs:string" use="required"/>
+																								<xs:attribute name="padding-right" type="xs:string" use="required"/>
+																								<xs:attribute name="padding-bottom" type="xs:string" use="required"/>
+																								<xs:attribute name="padding-left" type="xs:string" use="required"/>
+																							</xs:complexType>
+																						</xs:element>
+																						<xs:element form="unqualified" name="margin">
+																							<xs:complexType>
+																								<xs:attribute name="margin-top" type="xs:string" use="required"/>
+																								<xs:attribute name="margin-right" type="xs:string" use="required"/>
+																								<xs:attribute name="margin-bottom" type="xs:string" use="required"/>
+																								<xs:attribute name="margin-left" type="xs:string" use="required"/>
+																							</xs:complexType>
+																						</xs:element>
+																					</xs:sequence>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="pds-totalvotes-inner">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element form="unqualified" name="font">
+																							<xs:complexType>
+																								<xs:attribute name="font-style" type="xs:string" use="required"/>
+																								<xs:attribute name="font-family" type="xs:string" use="required"/>
+																								<xs:attribute name="line-height" type="xs:string" use="required"/>
+																								<xs:attribute name="font-weight" type="xs:string" use="required"/>
+																								<xs:attribute name="font-size" type="xs:string" use="required"/>
+																								<xs:attribute name="text-decoration" type="xs:string" use="required"/>
+																								<xs:attribute name="color" type="xs:string" use="required"/>
+																							</xs:complexType>
+																						</xs:element>
+																						<xs:element form="unqualified" name="background">
+																							<xs:complexType>
+																								<xs:attribute name="background-color" type="xs:string" use="required"/>
+																								<xs:attribute name="background-image" type="xs:string" use="required"/>
+																								<xs:attribute name="background-repeat" type="xs:string" use="required"/>
+																								<xs:attribute name="background-position" type="xs:string" use="required"/>
+																							</xs:complexType>
+																						</xs:element>
+																						<xs:element form="unqualified" name="border">
+																							<xs:complexType>
+																								<xs:attribute name="border-width" type="xs:string" use="required"/>
+																								<xs:attribute name="border-style" type="xs:string" use="required"/>
+																								<xs:attribute name="border-color" type="xs:string" use="required"/>
+																							</xs:complexType>
+																						</xs:element>
+																						<xs:element form="unqualified" name="padding">
+																							<xs:complexType>
+																								<xs:attribute name="padding-top" type="xs:string" use="required"/>
+																								<xs:attribute name="padding-right" type="xs:string" use="required"/>
+																								<xs:attribute name="padding-bottom" type="xs:string" use="required"/>
+																								<xs:attribute name="padding-left" type="xs:string" use="required"/>
+																							</xs:complexType>
+																						</xs:element>
+																					</xs:sequence>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+															<xs:attribute name="id" type="xs:unsignedInt" use="optional"/>
+															<xs:attribute name="type" type="xs:unsignedInt" use="optional"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="style">
+											<xs:complexType>
+												<xs:sequence minOccurs="0">
+													<xs:element name="title" type="xs:string"/>
+													<xs:element name="date" type="xs:string"/>
+													<xs:element minOccurs="0" form="unqualified" name="data">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element form="unqualified" name="pds-box">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element form="unqualified" name="background">
+																				<xs:complexType>
+																					<xs:attribute name="background-color" type="xs:string" use="required"/>
+																					<xs:attribute name="background-image" type="xs:string" use="required"/>
+																					<xs:attribute name="background-repeat" type="xs:string" use="required"/>
+																					<xs:attribute name="background-position" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="border">
+																				<xs:complexType>
+																					<xs:attribute name="border-width" type="xs:string" use="required"/>
+																					<xs:attribute name="border-style" type="xs:string" use="required"/>
+																					<xs:attribute name="border-color" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="margin">
+																				<xs:complexType>
+																					<xs:attribute name="margin-top" type="xs:string" use="required"/>
+																					<xs:attribute name="margin-right" type="xs:string" use="required"/>
+																					<xs:attribute name="margin-bottom" type="xs:string" use="required"/>
+																					<xs:attribute name="margin-left" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="padding">
+																				<xs:complexType>
+																					<xs:attribute name="padding-top" type="xs:string" use="required"/>
+																					<xs:attribute name="padding-right" type="xs:string" use="required"/>
+																					<xs:attribute name="padding-bottom" type="xs:string" use="required"/>
+																					<xs:attribute name="padding-left" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="scale">
+																				<xs:complexType>
+																					<xs:attribute name="width" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element form="unqualified" name="pds-question-top">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element form="unqualified" name="font">
+																				<xs:complexType>
+																					<xs:attribute name="font-style" type="xs:string" use="required"/>
+																					<xs:attribute name="line-height" type="xs:string" use="required"/>
+																					<xs:attribute name="font-weight" type="xs:string" use="required"/>
+																					<xs:attribute name="font-family" type="xs:string" use="required"/>
+																					<xs:attribute name="font-size" type="xs:string" use="required"/>
+																					<xs:attribute name="text-decoration" type="xs:string" use="required"/>
+																					<xs:attribute name="color" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="border">
+																				<xs:complexType>
+																					<xs:attribute name="border-width" type="xs:string" use="required"/>
+																					<xs:attribute name="border-style" type="xs:string" use="required"/>
+																					<xs:attribute name="border-color" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="background">
+																				<xs:complexType>
+																					<xs:attribute name="background-color" type="xs:string" use="required"/>
+																					<xs:attribute name="background-image" type="xs:string" use="required"/>
+																					<xs:attribute name="background-repeat" type="xs:string" use="required"/>
+																					<xs:attribute name="background-position" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="margin">
+																				<xs:complexType>
+																					<xs:attribute name="margin-top" type="xs:string" use="required"/>
+																					<xs:attribute name="margin-right" type="xs:string" use="required"/>
+																					<xs:attribute name="margin-bottom" type="xs:string" use="required"/>
+																					<xs:attribute name="margin-left" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="padding">
+																				<xs:complexType>
+																					<xs:attribute name="padding-top" type="xs:string" use="required"/>
+																					<xs:attribute name="padding-right" type="xs:string" use="required"/>
+																					<xs:attribute name="padding-bottom" type="xs:string" use="required"/>
+																					<xs:attribute name="padding-left" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element form="unqualified" name="pds-answer">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element form="unqualified" name="font">
+																				<xs:complexType>
+																					<xs:attribute name="font-style" type="xs:string" use="required"/>
+																					<xs:attribute name="line-height" type="xs:string" use="required"/>
+																					<xs:attribute name="font-weight" type="xs:string" use="required"/>
+																					<xs:attribute name="font-family" type="xs:string" use="required"/>
+																					<xs:attribute name="font-size" type="xs:string" use="required"/>
+																					<xs:attribute name="text-decoration" type="xs:string" use="required"/>
+																					<xs:attribute name="color" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="background">
+																				<xs:complexType>
+																					<xs:attribute name="background-color" type="xs:string" use="required"/>
+																					<xs:attribute name="background-image" type="xs:string" use="required"/>
+																					<xs:attribute name="background-repeat" type="xs:string" use="required"/>
+																					<xs:attribute name="background-position" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="border">
+																				<xs:complexType>
+																					<xs:attribute name="border-width" type="xs:string" use="required"/>
+																					<xs:attribute name="border-style" type="xs:string" use="required"/>
+																					<xs:attribute name="border-color" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="margin">
+																				<xs:complexType>
+																					<xs:attribute name="margin-top" type="xs:string" use="required"/>
+																					<xs:attribute name="margin-right" type="xs:string" use="required"/>
+																					<xs:attribute name="margin-bottom" type="xs:string" use="required"/>
+																					<xs:attribute name="margin-left" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="padding">
+																				<xs:complexType>
+																					<xs:attribute name="padding-top" type="xs:string" use="required"/>
+																					<xs:attribute name="padding-right" type="xs:string" use="required"/>
+																					<xs:attribute name="padding-bottom" type="xs:string" use="required"/>
+																					<xs:attribute name="padding-left" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element form="unqualified" name="pds-textfield">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element form="unqualified" name="font">
+																				<xs:complexType>
+																					<xs:attribute name="font-style" type="xs:string" use="required"/>
+																					<xs:attribute name="font-family" type="xs:string" use="required"/>
+																					<xs:attribute name="line-height" type="xs:string" use="required"/>
+																					<xs:attribute name="font-weight" type="xs:string" use="required"/>
+																					<xs:attribute name="font-size" type="xs:string" use="required"/>
+																					<xs:attribute name="text-decoration" type="xs:string" use="required"/>
+																					<xs:attribute name="color" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="background">
+																				<xs:complexType>
+																					<xs:attribute name="background-color" type="xs:string" use="required"/>
+																					<xs:attribute name="background-image" type="xs:string" use="required"/>
+																					<xs:attribute name="background-repeat" type="xs:string" use="required"/>
+																					<xs:attribute name="background-position" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="border">
+																				<xs:complexType>
+																					<xs:attribute name="border-width" type="xs:string" use="required"/>
+																					<xs:attribute name="border-style" type="xs:string" use="required"/>
+																					<xs:attribute name="border-color" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="margin">
+																				<xs:complexType>
+																					<xs:attribute name="margin-top" type="xs:string" use="required"/>
+																					<xs:attribute name="margin-right" type="xs:string" use="required"/>
+																					<xs:attribute name="margin-bottom" type="xs:string" use="required"/>
+																					<xs:attribute name="margin-left" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="padding">
+																				<xs:complexType>
+																					<xs:attribute name="padding-top" type="xs:string" use="required"/>
+																					<xs:attribute name="padding-right" type="xs:string" use="required"/>
+																					<xs:attribute name="padding-bottom" type="xs:string" use="required"/>
+																					<xs:attribute name="padding-left" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="scale">
+																				<xs:complexType>
+																					<xs:attribute name="width" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element form="unqualified" name="pds-answer-feedback">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element form="unqualified" name="background">
+																				<xs:complexType>
+																					<xs:attribute name="background-color" type="xs:string" use="required"/>
+																					<xs:attribute name="background-image" type="xs:string" use="required"/>
+																					<xs:attribute name="background-repeat" type="xs:string" use="required"/>
+																					<xs:attribute name="background-position" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="border">
+																				<xs:complexType>
+																					<xs:attribute name="border-width" type="xs:string" use="required"/>
+																					<xs:attribute name="border-style" type="xs:string" use="required"/>
+																					<xs:attribute name="border-color" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="padding">
+																				<xs:complexType>
+																					<xs:attribute name="padding-top" type="xs:string" use="required"/>
+																					<xs:attribute name="padding-right" type="xs:string" use="required"/>
+																					<xs:attribute name="padding-bottom" type="xs:string" use="required"/>
+																					<xs:attribute name="padding-left" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="margin">
+																				<xs:complexType>
+																					<xs:attribute name="margin-top" type="xs:string" use="required"/>
+																					<xs:attribute name="margin-right" type="xs:string" use="required"/>
+																					<xs:attribute name="margin-bottom" type="xs:string" use="required"/>
+																					<xs:attribute name="margin-left" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element form="unqualified" name="pds-answer-feedback-bar">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element form="unqualified" name="background">
+																				<xs:complexType>
+																					<xs:attribute name="background-color" type="xs:string" use="required"/>
+																					<xs:attribute name="background-image" type="xs:string" use="required"/>
+																					<xs:attribute name="background-repeat" type="xs:string" use="required"/>
+																					<xs:attribute name="background-position" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="border">
+																				<xs:complexType>
+																					<xs:attribute name="border-width" type="xs:string" use="required"/>
+																					<xs:attribute name="border-style" type="xs:string" use="required"/>
+																					<xs:attribute name="border-color" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="padding">
+																				<xs:complexType>
+																					<xs:attribute name="padding-top" type="xs:string" use="required"/>
+																					<xs:attribute name="padding-right" type="xs:string" use="required"/>
+																					<xs:attribute name="padding-bottom" type="xs:string" use="required"/>
+																					<xs:attribute name="padding-left" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="margin">
+																				<xs:complexType>
+																					<xs:attribute name="margin-top" type="xs:string" use="required"/>
+																					<xs:attribute name="margin-right" type="xs:string" use="required"/>
+																					<xs:attribute name="margin-bottom" type="xs:string" use="required"/>
+																					<xs:attribute name="margin-left" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+																<xs:element form="unqualified" name="pds-totalvotes-inner">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element form="unqualified" name="font">
+																				<xs:complexType>
+																					<xs:attribute name="font-style" type="xs:string" use="required"/>
+																					<xs:attribute name="font-family" type="xs:string" use="required"/>
+																					<xs:attribute name="line-height" type="xs:string" use="required"/>
+																					<xs:attribute name="font-weight" type="xs:string" use="required"/>
+																					<xs:attribute name="font-size" type="xs:string" use="required"/>
+																					<xs:attribute name="text-decoration" type="xs:string" use="required"/>
+																					<xs:attribute name="color" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="background">
+																				<xs:complexType>
+																					<xs:attribute name="background-color" type="xs:string" use="required"/>
+																					<xs:attribute name="background-image" type="xs:string" use="required"/>
+																					<xs:attribute name="background-repeat" type="xs:string" use="required"/>
+																					<xs:attribute name="background-position" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="border">
+																				<xs:complexType>
+																					<xs:attribute name="border-width" type="xs:string" use="required"/>
+																					<xs:attribute name="border-style" type="xs:string" use="required"/>
+																					<xs:attribute name="border-color" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																			<xs:element form="unqualified" name="padding">
+																				<xs:complexType>
+																					<xs:attribute name="padding-top" type="xs:string" use="required"/>
+																					<xs:attribute name="padding-right" type="xs:string" use="required"/>
+																					<xs:attribute name="padding-bottom" type="xs:string" use="required"/>
+																					<xs:attribute name="padding-left" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="id" type="xs:unsignedInt" use="optional"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="packs">
+											<xs:complexType>
+												<xs:sequence minOccurs="0">
+													<xs:element minOccurs="0" maxOccurs="unbounded" name="pack">
+														<xs:complexType>
+															<xs:sequence minOccurs="0">
+																<xs:element form="unqualified" name="pack">
+																	<xs:complexType>
+																		<xs:sequence minOccurs="0">
+																			<xs:element form="unqualified" name="title" type="xs:string"/>
+																			<xs:element maxOccurs="unbounded" form="unqualified" name="phrase">
+																				<xs:complexType>
+																					<xs:simpleContent>
+																						<xs:extension base="xs:string">
+																							<xs:attribute name="phraseID" type="xs:unsignedInt" use="required"/>
+																						</xs:extension>
+																					</xs:simpleContent>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																		<xs:attribute name="type" type="xs:string" use="required"/>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+															<xs:attribute name="id" type="xs:unsignedInt" use="optional"/>
+															<xs:attribute name="date" type="xs:string" use="optional"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="pack">
+											<xs:complexType>
+												<xs:sequence minOccurs="0">
+													<xs:element form="unqualified" name="pack">
+														<xs:complexType>
+															<xs:sequence minOccurs="0">
+																<xs:element form="unqualified" name="title" type="xs:string"/>
+																<xs:element maxOccurs="unbounded" form="unqualified" name="phrase">
+																	<xs:complexType>
+																		<xs:simpleContent>
+																			<xs:extension base="xs:string">
+																				<xs:attribute name="phraseID" type="xs:unsignedInt" use="required"/>
+																			</xs:extension>
+																		</xs:simpleContent>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+															<xs:attribute name="type" type="xs:string" use="required"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+												<xs:attribute name="id" type="xs:unsignedInt" use="optional"/>
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="folders">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element minOccurs="0" name="folder">
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="xs:string">
+																	<xs:attribute name="id" type="xs:unsignedInt" use="required"/>
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="languages">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="language">
+														<xs:complexType>
+															<xs:simpleContent>
+																<xs:extension base="xs:string">
+																	<xs:attribute name="id" type="xs:unsignedInt" use="required"/>
+																</xs:extension>
+															</xs:simpleContent>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="extensions">
+											<xs:complexType>
+												<xs:sequence minOccurs="0">
+													<xs:element name="folders">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="folder">
+																	<xs:complexType>
+																		<xs:simpleContent>
+																			<xs:extension base="xs:string">
+																				<xs:attribute name="id" type="xs:unsignedInt" use="required"/>
+																			</xs:extension>
+																		</xs:simpleContent>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="styles">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element minOccurs="0" maxOccurs="unbounded" name="style">
+																	<xs:complexType>
+																		<xs:sequence minOccurs="0">
+																			<xs:element name="title" type="xs:string"/>
+																			<xs:element minOccurs="0" form="unqualified" name="data">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element form="unqualified" name="pds-box">
+																							<xs:complexType>
+																								<xs:sequence>
+																									<xs:element form="unqualified" name="background">
+																										<xs:complexType>
+																											<xs:attribute name="background-color" type="xs:string" use="required"/>
+																											<xs:attribute name="background-image" type="xs:string" use="required"/>
+																											<xs:attribute name="background-repeat" type="xs:string" use="required"/>
+																											<xs:attribute name="background-position" type="xs:string" use="required"/>
+																										</xs:complexType>
+																									</xs:element>
+																									<xs:element form="unqualified" name="border">
+																										<xs:complexType>
+																											<xs:attribute name="border-width" type="xs:string" use="required"/>
+																											<xs:attribute name="border-style" type="xs:string" use="required"/>
+																											<xs:attribute name="border-color" type="xs:string" use="required"/>
+																										</xs:complexType>
+																									</xs:element>
+																									<xs:element form="unqualified" name="margin">
+																										<xs:complexType>
+																											<xs:attribute name="margin-top" type="xs:string" use="required"/>
+																											<xs:attribute name="margin-right" type="xs:string" use="required"/>
+																											<xs:attribute name="margin-bottom" type="xs:string" use="required"/>
+																											<xs:attribute name="margin-left" type="xs:string" use="required"/>
+																										</xs:complexType>
+																									</xs:element>
+																									<xs:element form="unqualified" name="padding">
+																										<xs:complexType>
+																											<xs:attribute name="padding-top" type="xs:string" use="required"/>
+																											<xs:attribute name="padding-right" type="xs:string" use="required"/>
+																											<xs:attribute name="padding-bottom" type="xs:string" use="required"/>
+																											<xs:attribute name="padding-left" type="xs:string" use="required"/>
+																										</xs:complexType>
+																									</xs:element>
+																									<xs:element form="unqualified" name="scale">
+																										<xs:complexType>
+																											<xs:attribute name="width" type="xs:string" use="required"/>
+																										</xs:complexType>
+																									</xs:element>
+																								</xs:sequence>
+																							</xs:complexType>
+																						</xs:element>
+																						<xs:element form="unqualified" name="pds-question-top">
+																							<xs:complexType>
+																								<xs:sequence>
+																									<xs:element form="unqualified" name="font">
+																										<xs:complexType>
+																											<xs:attribute name="font-style" type="xs:string" use="required"/>
+																											<xs:attribute name="line-height" type="xs:string" use="required"/>
+																											<xs:attribute name="font-weight" type="xs:string" use="required"/>
+																											<xs:attribute name="font-family" type="xs:string" use="required"/>
+																											<xs:attribute name="font-size" type="xs:string" use="required"/>
+																											<xs:attribute name="text-decoration" type="xs:string" use="required"/>
+																											<xs:attribute name="color" type="xs:string" use="required"/>
+																										</xs:complexType>
+																									</xs:element>
+																									<xs:element form="unqualified" name="border">
+																										<xs:complexType>
+																											<xs:attribute name="border-width" type="xs:string" use="required"/>
+																											<xs:attribute name="border-style" type="xs:string" use="required"/>
+																											<xs:attribute name="border-color" type="xs:string" use="required"/>
+																										</xs:complexType>
+																									</xs:element>
+																									<xs:element form="unqualified" name="background">
+																										<xs:complexType>
+																											<xs:attribute name="background-color" type="xs:string" use="required"/>
+																											<xs:attribute name="background-image" type="xs:string" use="required"/>
+																											<xs:attribute name="background-repeat" type="xs:string" use="required"/>
+																											<xs:attribute name="background-position" type="xs:string" use="required"/>
+																										</xs:complexType>
+																									</xs:element>
+																									<xs:element form="unqualified" name="margin">
+																										<xs:complexType>
+																											<xs:attribute name="margin-top" type="xs:string" use="required"/>
+																											<xs:attribute name="margin-right" type="xs:string" use="required"/>
+																											<xs:attribute name="margin-bottom" type="xs:string" use="required"/>
+																											<xs:attribute name="margin-left" type="xs:string" use="required"/>
+																										</xs:complexType>
+																									</xs:element>
+																									<xs:element form="unqualified" name="padding">
+																										<xs:complexType>
+																											<xs:attribute name="padding-top" type="xs:string" use="required"/>
+																											<xs:attribute name="padding-right" type="xs:string" use="required"/>
+																											<xs:attribute name="padding-bottom" type="xs:string" use="required"/>
+																											<xs:attribute name="padding-left" type="xs:string" use="required"/>
+																										</xs:complexType>
+																									</xs:element>
+																								</xs:sequence>
+																							</xs:complexType>
+																						</xs:element>
+																						<xs:element form="unqualified" name="pds-answer">
+																							<xs:complexType>
+																								<xs:sequence>
+																									<xs:element form="unqualified" name="font">
+																										<xs:complexType>
+																											<xs:attribute name="font-style" type="xs:string" use="required"/>
+																											<xs:attribute name="line-height" type="xs:string" use="required"/>
+																											<xs:attribute name="font-weight" type="xs:string" use="required"/>
+																											<xs:attribute name="font-family" type="xs:string" use="required"/>
+																											<xs:attribute name="font-size" type="xs:string" use="required"/>
+																											<xs:attribute name="text-decoration" type="xs:string" use="required"/>
+																											<xs:attribute name="color" type="xs:string" use="required"/>
+																										</xs:complexType>
+																									</xs:element>
+																									<xs:element form="unqualified" name="background">
+																										<xs:complexType>
+																											<xs:attribute name="background-color" type="xs:string" use="required"/>
+																											<xs:attribute name="background-image" type="xs:string" use="required"/>
+																											<xs:attribute name="background-repeat" type="xs:string" use="required"/>
+																											<xs:attribute name="background-position" type="xs:string" use="required"/>
+																										</xs:complexType>
+																									</xs:element>
+																									<xs:element form="unqualified" name="border">
+																										<xs:complexType>
+																											<xs:attribute name="border-width" type="xs:string" use="required"/>
+																											<xs:attribute name="border-style" type="xs:string" use="required"/>
+																											<xs:attribute name="border-color" type="xs:string" use="required"/>
+																										</xs:complexType>
+																									</xs:element>
+																									<xs:element form="unqualified" name="margin">
+																										<xs:complexType>
+																											<xs:attribute name="margin-top" type="xs:string" use="required"/>
+																											<xs:attribute name="margin-right" type="xs:string" use="required"/>
+																											<xs:attribute name="margin-bottom" type="xs:string" use="required"/>
+																											<xs:attribute name="margin-left" type="xs:string" use="required"/>
+																										</xs:complexType>
+																									</xs:element>
+																									<xs:element form="unqualified" name="padding">
+																										<xs:complexType>
+																											<xs:attribute name="padding-top" type="xs:string" use="required"/>
+																											<xs:attribute name="padding-right" type="xs:string" use="required"/>
+																											<xs:attribute name="padding-bottom" type="xs:string" use="required"/>
+																											<xs:attribute name="padding-left" type="xs:string" use="required"/>
+																										</xs:complexType>
+																									</xs:element>
+																								</xs:sequence>
+																							</xs:complexType>
+																						</xs:element>
+																						<xs:element form="unqualified" name="pds-textfield">
+																							<xs:complexType>
+																								<xs:sequence>
+																									<xs:element form="unqualified" name="font">
+																										<xs:complexType>
+																											<xs:attribute name="font-style" type="xs:string" use="required"/>
+																											<xs:attribute name="font-family" type="xs:string" use="required"/>
+																											<xs:attribute name="line-height" type="xs:string" use="required"/>
+																											<xs:attribute name="font-weight" type="xs:string" use="required"/>
+																											<xs:attribute name="font-size" type="xs:string" use="required"/>
+																											<xs:attribute name="text-decoration" type="xs:string" use="required"/>
+																											<xs:attribute name="color" type="xs:string" use="required"/>
+																										</xs:complexType>
+																									</xs:element>
+																									<xs:element form="unqualified" name="background">
+																										<xs:complexType>
+																											<xs:attribute name="background-color" type="xs:string" use="required"/>
+																											<xs:attribute name="background-image" type="xs:string" use="required"/>
+																											<xs:attribute name="background-repeat" type="xs:string" use="required"/>
+																											<xs:attribute name="background-position" type="xs:string" use="required"/>
+																										</xs:complexType>
+																									</xs:element>
+																									<xs:element form="unqualified" name="border">
+																										<xs:complexType>
+																											<xs:attribute name="border-width" type="xs:string" use="required"/>
+																											<xs:attribute name="border-style" type="xs:string" use="required"/>
+																											<xs:attribute name="border-color" type="xs:string" use="required"/>
+																										</xs:complexType>
+																									</xs:element>
+																									<xs:element form="unqualified" name="margin">
+																										<xs:complexType>
+																											<xs:attribute name="margin-top" type="xs:string" use="required"/>
+																											<xs:attribute name="margin-right" type="xs:string" use="required"/>
+																											<xs:attribute name="margin-bottom" type="xs:string" use="required"/>
+																											<xs:attribute name="margin-left" type="xs:string" use="required"/>
+																										</xs:complexType>
+																									</xs:element>
+																									<xs:element form="unqualified" name="padding">
+																										<xs:complexType>
+																											<xs:attribute name="padding-top" type="xs:string" use="required"/>
+																											<xs:attribute name="padding-right" type="xs:string" use="required"/>
+																											<xs:attribute name="padding-bottom" type="xs:string" use="required"/>
+																											<xs:attribute name="padding-left" type="xs:string" use="required"/>
+																										</xs:complexType>
+																									</xs:element>
+																									<xs:element form="unqualified" name="scale">
+																										<xs:complexType>
+																											<xs:attribute name="width" type="xs:string" use="required"/>
+																										</xs:complexType>
+																									</xs:element>
+																								</xs:sequence>
+																							</xs:complexType>
+																						</xs:element>
+																						<xs:element form="unqualified" name="pds-answer-feedback">
+																							<xs:complexType>
+																								<xs:sequence>
+																									<xs:element form="unqualified" name="background">
+																										<xs:complexType>
+																											<xs:attribute name="background-color" type="xs:string" use="required"/>
+																											<xs:attribute name="background-image" type="xs:string" use="required"/>
+																											<xs:attribute name="background-repeat" type="xs:string" use="required"/>
+																											<xs:attribute name="background-position" type="xs:string" use="required"/>
+																										</xs:complexType>
+																									</xs:element>
+																									<xs:element form="unqualified" name="border">
+																										<xs:complexType>
+																											<xs:attribute name="border-width" type="xs:string" use="required"/>
+																											<xs:attribute name="border-style" type="xs:string" use="required"/>
+																											<xs:attribute name="border-color" type="xs:string" use="required"/>
+																										</xs:complexType>
+																									</xs:element>
+																									<xs:element form="unqualified" name="padding">
+																										<xs:complexType>
+																											<xs:attribute name="padding-top" type="xs:string" use="required"/>
+																											<xs:attribute name="padding-right" type="xs:string" use="required"/>
+																											<xs:attribute name="padding-bottom" type="xs:string" use="required"/>
+																											<xs:attribute name="padding-left" type="xs:string" use="required"/>
+																										</xs:complexType>
+																									</xs:element>
+																									<xs:element form="unqualified" name="margin">
+																										<xs:complexType>
+																											<xs:attribute name="margin-top" type="xs:string" use="required"/>
+																											<xs:attribute name="margin-right" type="xs:string" use="required"/>
+																											<xs:attribute name="margin-bottom" type="xs:string" use="required"/>
+																											<xs:attribute name="margin-left" type="xs:string" use="required"/>
+																										</xs:complexType>
+																									</xs:element>
+																								</xs:sequence>
+																							</xs:complexType>
+																						</xs:element>
+																						<xs:element form="unqualified" name="pds-answer-feedback-bar">
+																							<xs:complexType>
+																								<xs:sequence>
+																									<xs:element form="unqualified" name="background">
+																										<xs:complexType>
+																											<xs:attribute name="background-color" type="xs:string" use="required"/>
+																											<xs:attribute name="background-image" type="xs:string" use="required"/>
+																											<xs:attribute name="background-repeat" type="xs:string" use="required"/>
+																											<xs:attribute name="background-position" type="xs:string" use="required"/>
+																										</xs:complexType>
+																									</xs:element>
+																									<xs:element form="unqualified" name="border">
+																										<xs:complexType>
+																											<xs:attribute name="border-width" type="xs:string" use="required"/>
+																											<xs:attribute name="border-style" type="xs:string" use="required"/>
+																											<xs:attribute name="border-color" type="xs:string" use="required"/>
+																										</xs:complexType>
+																									</xs:element>
+																									<xs:element form="unqualified" name="padding">
+																										<xs:complexType>
+																											<xs:attribute name="padding-top" type="xs:string" use="required"/>
+																											<xs:attribute name="padding-right" type="xs:string" use="required"/>
+																											<xs:attribute name="padding-bottom" type="xs:string" use="required"/>
+																											<xs:attribute name="padding-left" type="xs:string" use="required"/>
+																										</xs:complexType>
+																									</xs:element>
+																									<xs:element form="unqualified" name="margin">
+																										<xs:complexType>
+																											<xs:attribute name="margin-top" type="xs:string" use="required"/>
+																											<xs:attribute name="margin-right" type="xs:string" use="required"/>
+																											<xs:attribute name="margin-bottom" type="xs:string" use="required"/>
+																											<xs:attribute name="margin-left" type="xs:string" use="required"/>
+																										</xs:complexType>
+																									</xs:element>
+																								</xs:sequence>
+																							</xs:complexType>
+																						</xs:element>
+																						<xs:element form="unqualified" name="pds-totalvotes-inner">
+																							<xs:complexType>
+																								<xs:sequence>
+																									<xs:element form="unqualified" name="font">
+																										<xs:complexType>
+																											<xs:attribute name="font-style" type="xs:string" use="required"/>
+																											<xs:attribute name="font-family" type="xs:string" use="required"/>
+																											<xs:attribute name="line-height" type="xs:string" use="required"/>
+																											<xs:attribute name="font-weight" type="xs:string" use="required"/>
+																											<xs:attribute name="font-size" type="xs:string" use="required"/>
+																											<xs:attribute name="text-decoration" type="xs:string" use="required"/>
+																											<xs:attribute name="color" type="xs:string" use="required"/>
+																										</xs:complexType>
+																									</xs:element>
+																									<xs:element form="unqualified" name="background">
+																										<xs:complexType>
+																											<xs:attribute name="background-color" type="xs:string" use="required"/>
+																											<xs:attribute name="background-image" type="xs:string" use="required"/>
+																											<xs:attribute name="background-repeat" type="xs:string" use="required"/>
+																											<xs:attribute name="background-position" type="xs:string" use="required"/>
+																										</xs:complexType>
+																									</xs:element>
+																									<xs:element form="unqualified" name="border">
+																										<xs:complexType>
+																											<xs:attribute name="border-width" type="xs:string" use="required"/>
+																											<xs:attribute name="border-style" type="xs:string" use="required"/>
+																											<xs:attribute name="border-color" type="xs:string" use="required"/>
+																										</xs:complexType>
+																									</xs:element>
+																									<xs:element form="unqualified" name="padding">
+																										<xs:complexType>
+																											<xs:attribute name="padding-top" type="xs:string" use="required"/>
+																											<xs:attribute name="padding-right" type="xs:string" use="required"/>
+																											<xs:attribute name="padding-bottom" type="xs:string" use="required"/>
+																											<xs:attribute name="padding-left" type="xs:string" use="required"/>
+																										</xs:complexType>
+																									</xs:element>
+																								</xs:sequence>
+																							</xs:complexType>
+																						</xs:element>
+																					</xs:sequence>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																		<xs:attribute name="id" type="xs:unsignedInt" use="optional"/>
+																		<xs:attribute name="type" type="xs:unsignedInt" use="optional"/>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="packs">
+														<xs:complexType>
+															<xs:sequence minOccurs="0">
+																<xs:element minOccurs="0" maxOccurs="unbounded" name="pack">
+																	<xs:complexType>
+																		<xs:sequence minOccurs="0">
+																			<xs:element form="unqualified" name="pack">
+																				<xs:complexType>
+																					<xs:sequence minOccurs="0">
+																						<xs:element form="unqualified" name="title" type="xs:string"/>
+																						<xs:element maxOccurs="unbounded" form="unqualified" name="phrase">
+																							<xs:complexType>
+																								<xs:simpleContent>
+																									<xs:extension base="xs:string">
+																										<xs:attribute name="phraseID" type="xs:unsignedInt" use="required"/>
+																									</xs:extension>
+																								</xs:simpleContent>
+																							</xs:complexType>
+																						</xs:element>
+																					</xs:sequence>
+																					<xs:attribute name="type" type="xs:string" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																		<xs:attribute name="id" type="xs:unsignedInt" use="optional"/>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+													<xs:element name="languages">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="language">
+																	<xs:complexType>
+																		<xs:simpleContent>
+																			<xs:extension base="xs:string">
+																				<xs:attribute name="id" type="xs:unsignedInt" use="required"/>
+																			</xs:extension>
+																		</xs:simpleContent>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="search">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element minOccurs="0" maxOccurs="unbounded" name="poll">
+														<xs:complexType>
+															<xs:sequence>
+																<xs:element name="rank" type="xs:unsignedInt" minOccurs="0"/>
+																<xs:element name="question" type="xs:string" minOccurs="0"/>
+																<xs:element name="url" type="xs:string" minOccurs="0"/>
+																<xs:element name="answers" minOccurs="0">
+																	<xs:complexType>
+																		<xs:sequence>
+																			<xs:element maxOccurs="unbounded" name="answer">
+																				<xs:complexType>
+																					<xs:sequence>
+																						<xs:element name="text" type="xs:string"/>
+																						<xs:element name="media">
+																							<xs:complexType>
+																								<xs:sequence>
+																									<xs:element name="code" type="xs:string"/>
+																								</xs:sequence>
+																								<xs:attribute name="type" type="xs:unsignedInt" use="required"/>
+																							</xs:complexType>
+																						</xs:element>
+																					</xs:sequence>
+																					<xs:attribute name="id" type="xs:unsignedInt" use="required"/>
+																					<xs:attribute name="total" type="xs:unsignedInt" use="required"/>
+																				</xs:complexType>
+																			</xs:element>
+																		</xs:sequence>
+																	</xs:complexType>
+																</xs:element>
+															</xs:sequence>
+															<xs:attribute name="id" type="xs:unsignedInt" use="required"/>
+															<xs:attribute name="created" type="xs:dateTime" use="required"/>
+															<xs:attribute name="responses" type="xs:unsignedInt" use="required"/>
+														</xs:complexType>
+													</xs:element>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+										<xs:element minOccurs="0" name="activity" type="xs:string"/>
+									</xs:sequence>
+									<xs:attribute name="id" type="xs:string" use="required"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="errors" maxOccurs="1" minOccurs="0">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="error" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:simpleContent>
+										<xs:extension base="xs:string">
+											<xs:attribute name="id" type="xs:unsignedInt" use="required"/>
+										</xs:extension>
+									</xs:simpleContent>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+			<xs:attribute name="partnerGUID" type="xs:string" use="required"/>
+			<xs:attribute name="partnerUserID" type="xs:string" use="optional"/>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
