@@ -1,11 +1,10 @@
 # Django settings for apitest project.
 
-POLLDADDY_API_KEY = '6a979c9d-ee14-4a89-1340-00006ef88da6' # API key for polldaddy
-POLLDADDY_REQUEST_URL = 'https://api.polldaddy.com/'
-
+#POLLDADDY_API_KEY = '67e37610-f575-8528-4ac8-0000523e46e2' # API key for polldaddy
 
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
+#APPEND_SLASH=False
 
 ADMINS = (
     ('Delane Jackson', 'delane.jackson@gmail.com'),
@@ -74,7 +73,7 @@ TEMPLATE_LOADERS = (
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'django.middleware.csrf.CsrfViewMiddleware',
+    #'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
 )
@@ -85,6 +84,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
+    '/home/delane/UW/Python/UWPython/Python2/apitest/templates/',
 )
 
 INSTALLED_APPS = (
@@ -93,6 +93,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.messages',
+    'apitest.polldaddy',
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:

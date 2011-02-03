@@ -4,8 +4,9 @@ from django.conf.urls.defaults import *
 # from django.contrib import admin
 # admin.autodiscover()
 
-urlpatterns = patterns('',
-    (r'^polldaddy/', include('apitest.polldaddy.urls')),
+urlpatterns = patterns('polldaddy.views',
+    (r'^$', 'index'),
+    (r'^editpoll/$', 'editpoll'),
     # Example:
     # (r'^apitest/', include('apitest.foo.urls')),
 
