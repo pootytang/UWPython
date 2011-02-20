@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Voting in {{poll.question}} Poll
+{% endblock %}
+
+{% block content %}
+<h3>{{ poll.question }}</h3>
+
+<form method="post" action="/polls/{{ poll.id }}/results/">
+
+{% for choice in poll.choice_set.all %}
+    <input type="radio" name="answer" value="{{ choice.choice }}" />{{ choice.choice }}<br />
+{% endfor %}
+
+<input type="submit" name="vote" value="Vote" />
+</form>
+
+{% endblock %}

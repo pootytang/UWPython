@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %} 
+    Results for {{ poll.question }}
+{% endblock %}
+
+{% block content %}
+    <h3>Results for {{ poll.question }}</h3>
+    {% for choice in choices %}
+        {{ choice.choice }}: {{ choice.votes }}<br />
+    {% endfor %}
+<hr />
+{{ request }}
+{% endblock %}

@@ -1,0 +1,16 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<html lang="en">
+    <head>
+        <title>{% block title %}{% endblock %}</title>
+    </head>
+    <body>
+        <div id="nav">
+            <ul>
+                <li><a href="/apitests/">HOME</a></li>
+            </ul>
+        </div>
+        <div id="content">
+            {% block content %}{% endblock %}
+        </div>
+    </body>
+</html>

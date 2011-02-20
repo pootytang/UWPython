@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block title %}
+    API Usage
+{% endblock %}
+
+{% block content %}
+    -- The api currently only supports getting the results of a poll.<br />
+    -- All requests should use the GET http method.</br />
+    To use the API:
+    <ol>
+        <li>Get the polls by making a request to /polls/get_polls/</li>
+        <li>Use the poll id to make a request to /polls/(poll_id)/results/ - where (poll_id) is the poll id to return</li>
+    </ol>
+{% endblock %}

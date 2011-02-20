@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <title> {% block title %} Page{% endblock %}</title>
+    </head>
+    <body>
+        <h3><a href="/polls/">Assignment 6</a></h3>
+        <div id="nav">
+            <ul><li><a href="/polls/api/">Results API Info</a></li></ul>
+        </div>
+        <hr />
+        <div id="content">
+            {% block content %}{% endblock %}
+        </div>
+    </body>
+</html>
