@@ -10,7 +10,7 @@ import logging
 logger = logging.getLogger('polldaddyAPI')
 logger.setLevel(logging.DEBUG) # This level of message is sent to handler
 
-fh = logging.FileHandler('polldaddyAPI.log')
+fh = logging.FileHandler('/home/delane/UW/Python/UWPython/Python2/apitest/polldaddy/polldaddyAPI.log')
 fh.setLevel(logging.DEBUG) # This level of message is sent to the file
 
 formatter = logging.Formatter('%(asctime)s--%(funcName)s::%(levelname)s::%(message)s')
@@ -142,6 +142,22 @@ class PollDaddyAPI(object):
         logger.info('calling fetchInfo with %s' % jsonPayload)
         return self.fetchInfo(jsonPayload)
 
+    def deletePollJSON(self, pid):
+        '''
+        Deletes the poll for pid.
+        uid - the user id.  Set upon instantiation
+        pid - the poll id to delete
+        usercode - set by the setUserCode method
+        '''
+        if self.UID and self.userCode and pid:
+            logger.info('Deleting poll with id of: %s' % pid)
+            jsonPayload = pdReq.DELETE_POLL_JSON % (self.UID, self.userCode, pid)
+        else:
+            raise Attributeerror('userCode=%s, userID=%s, pollID=%s' % (self.userCode, self.UID, pid))
+
+        logger.info('Calling fetchInfo with %s' % jsonPayload)
+        return self.fetchInfo(jsonPayload)
+
     #################### XML METHODS ####################
     def initialRequestXML(self, email, password):
         """ implements the pdInitiate request which returns the userCode in XML format """
@@ -203,18 +219,28 @@ class PollDaddyAPI(object):
         return returnVal
 
     def getPollIDs(self, jsonResponsePayload):
-        """ Returns a dictionary containing an ID as a key and the question as the value """
+        '''
+        Returns a dictionary containing an ID as a key and the question as the value.
+        If there's no polls then an empty list is returned
+        jsonResponsePayload - The response returned by getPollsJSON() method
+        '''
         logger.info('parsing:\n%s' % jsonResponsePayload)
         obj = json.loads(jsonResponsePayload)
-        respList = obj['pdResponse']['demands']['demand'][0]['polls']['poll']
-        #respList should now be a list with x amount of elements.  Each element is a dictionary containing the data I want
 
-        logger.debug('Retrieved:\n%s' % respList)
-        pollList = {}
-        for poll in respList:
-            pollList[poll['id']] = poll['content']
+        #check to make sure there was something to get
+        if obj['pdResponse']['demands']['demand'][0]['polls']['total'] != 0:
+            respList = obj['pdResponse']['demands']['demand'][0]['polls']['poll']
+            #respList should now be a list with x amount of elements.  Each element is a dictionary containing the data I want
+            logger.debug('Retrieved:\n%s' % respList)
+            pollList = {}
+            for poll in respList:
+                pollList[poll['id']] = poll['content']
 
-        logger.info('Returning:\n%s' % str(pollList))
+            logger.info('Returning:\n%s' % str(pollList))
+        else:
+            logger.warning('Returning an empty list')
+            pollList = {}
+
         return pollList
 
     def getPollListRaw(self, jsonResponsePayload):

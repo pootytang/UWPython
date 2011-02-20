@@ -1,25 +1,63 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
-<html lang="en">
-<head>
-    <title>BLAH BLAH BLAH</title>
-</head>
-<body>
-    Edit a Poll:<br />
-    <form name="EditPoll" method="post" action="editpoll/">
+{% extends "base.html" %}
+
+{% block title %}
+    {{ title }}
+{% endblock %}
+
+{% block content %}
+    <b>Create a Poll:</b>
+    <form name="CreatePoll" method="post" action="/apitests/pd/create/">
         <input type="hidden" name="uid" value="{{uid}}" />
         <input type="hidden" name="userCode" value="{{userCode}}" />
-        <select name="pid">
-        {% for key,value in pollIDs.items %}
-            <option value="{{key}}">{{ value }}</option>
-        {% endfor %}
+        Poll Question: <input type="text" name="question" maxlength="300" /><br />
+        Poll Answer type:<br />
+        <input type="radio" name="answer" value="yes/no">Yes/No</input><br />
+        <input type="radio" name="answer" value="true/false">True/False</input><br />
         </select>
 
-        <input type="submit" name="edit" value="Edit" />       
+        <input type="submit" name="create" value="Create Poll" />
     </form>
+    <br />
+
+    <b>Edit a Poll:</b>
+    <form name="EditPoll" method="post" action="/apitests/pd/edit/">
+        <input type="hidden" name="uid" value="{{uid}}" />
+        <input type="hidden" name="userCode" value="{{userCode}}" />
+        {% if pollIDs.items %}
+            <select name="pid">
+            {% for key,value in pollIDs.items %}
+                <option value="{{key}}">{{ value }}</option>
+            {% endfor %}
+            </select>
+
+            <input type="submit" name="edit" value="Edit" />
+        {% else %}
+            THERE'S NO POLLS TO EDIT
+        {% endif %}
+
+    </form>
+    <br />
+
+    <b>Delete a Poll:</b>
+    <form name="DeletePoll" method="post" action="/apitests/pd/delete/">
+        <input type="hidden" name="uid" value="{{uid}}" />
+        <input type="hidden" name="userCode" value="{{userCode}}" />
+        {% if pollIDs.items %}
+            {% for key,value in pollIDs.items %}
+                <input type="checkbox" name="pid" value="{{key}}">{{ value }}</input><br />
+            {% endfor %}
+
+            <input type="submit" name="deletepoll" value="Delete" />
+        {% else %}
+            THERE'S NO POLLS TO DELETE
+        {% endif %}
+
+    </form>
+    <br />
+
     <hr />
-    <form method='post' action=''>
-        UserID: <input type='text' name='uid' />
-        <input type='submit' name='submit' value='Post' />
-    </form>
-</body>
-</html>
+    {% for msg in message %}
+        {{ msg }}<br />
+    {% endfor %}
+
+{% endblock %}

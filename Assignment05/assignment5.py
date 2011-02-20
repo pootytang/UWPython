@@ -2,7 +2,7 @@
 import threading, cherrypy, os, sys
 from bookdb import BookDB
 
-sys.path.append(os.path.dirname(os.path.abspath(__file__)))
+#sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
 cherrypy.config.update({'environment': 'embedded'})
 

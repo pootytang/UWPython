@@ -1,8 +1,8 @@
-2011-01-30 21:56:05,898--__init__::DEBUG::Initialized object with uid - 67e37610-f575-8528-4ac8-0000523e46e2
-2011-01-30 21:56:05,899--fetchInfo::INFO::sending request to https://api.polldaddy.com/
-2011-01-30 21:56:05,899--fetchInfo::INFO::user-agent: Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.237 Safari/534.10
-2011-01-30 21:56:05,899--fetchInfo::INFO::headers: {'Content-Type': 'text/xml', 'Accept': 'text/*', 'User-Agent': 'Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.237 Safari/534.10'}
-2011-01-30 21:56:06,555--fetchInfo::DEBUG::
+2011-02-14 22:22:15,951--__init__::DEBUG::Initialized object with uid - 67e37610-f575-8528-4ac8-0000523e46e2
+2011-02-14 22:22:15,951--fetchInfo::INFO::sending request to https://api.polldaddy.com/
+2011-02-14 22:22:15,951--fetchInfo::INFO::user-agent: Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.237 Safari/534.10
+2011-02-14 22:22:15,951--fetchInfo::INFO::headers: {'Content-Type': 'text/xml', 'Accept': 'text/*', 'User-Agent': 'Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.237 Safari/534.10'}
+2011-02-14 22:22:16,589--fetchInfo::DEBUG::
 ---------- REQUEST PAYLOAD ----------
 
     {
@@ -17,19 +17,19 @@
         }
     }
     
-2011-01-30 21:56:06,555--fetchInfo::DEBUG::
+2011-02-14 22:22:16,590--fetchInfo::DEBUG::
 ---------- RETURNING RESPONSE ----------
 {"pdResponse":{"userCode":"$P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/","demands":{"demand":[]},"partnerGUID":"67e37610-f575-8528-4ac8-0000523e46e2","partnerUserID":"67e37610-f575-8528-4ac8-0000523e46e2"}}
 
 
-2011-01-30 21:56:06,555--getUserCodeJSON::DEBUG::returning {"pdResponse":{"userCode":"$P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/","demands":{"demand":[]},"partnerGUID":"67e37610-f575-8528-4ac8-0000523e46e2","partnerUserID":"67e37610-f575-8528-4ac8-0000523e46e2"}}
+2011-02-14 22:22:16,590--getUserCodeJSON::DEBUG::returning {"pdResponse":{"userCode":"$P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/","demands":{"demand":[]},"partnerGUID":"67e37610-f575-8528-4ac8-0000523e46e2","partnerUserID":"67e37610-f575-8528-4ac8-0000523e46e2"}}
 
 
-2011-01-30 21:56:06,555--parseUserCode::INFO::Parsing UserCode...
-2011-01-30 21:56:06,556--parseUserCode::DEBUG::return value set to: $P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/
-2011-01-30 21:56:06,556--parseUserCode::DEBUG::Returning $P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/
-2011-01-30 21:56:06,556--setUserCode::DEBUG::user code set to: $P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/
-2011-01-30 21:56:06,556--getPollsJSON::INFO::calling fetchInfo with 
+2011-02-14 22:22:16,590--parseUserCode::INFO::Parsing UserCode...
+2011-02-14 22:22:16,590--parseUserCode::DEBUG::return value set to: $P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/
+2011-02-14 22:22:16,591--parseUserCode::DEBUG::Returning $P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/
+2011-02-14 22:22:16,591--setUserCode::DEBUG::user code set to: $P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/
+2011-02-14 22:22:16,591--getPollsJSON::INFO::calling fetchInfo with 
     {
         "pdRequest": {
             "partnerGUID": "67e37610-f575-8528-4ac8-0000523e46e2",
@@ -46,10 +46,10 @@
         }
     }
     
-2011-01-30 21:56:06,556--fetchInfo::INFO::sending request to https://api.polldaddy.com/
-2011-01-30 21:56:06,556--fetchInfo::INFO::user-agent: Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.237 Safari/534.10
-2011-01-30 21:56:06,556--fetchInfo::INFO::headers: {'Content-Type': 'text/xml', 'Accept': 'text/*', 'User-Agent': 'Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.237 Safari/534.10'}
-2011-01-30 21:56:12,172--fetchInfo::DEBUG::
+2011-02-14 22:22:16,591--fetchInfo::INFO::sending request to https://api.polldaddy.com/
+2011-02-14 22:22:16,591--fetchInfo::INFO::user-agent: Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.237 Safari/534.10
+2011-02-14 22:22:16,591--fetchInfo::INFO::headers: {'Content-Type': 'text/xml', 'Accept': 'text/*', 'User-Agent': 'Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.237 Safari/534.10'}
+2011-02-14 22:22:22,085--fetchInfo::DEBUG::
 ---------- REQUEST PAYLOAD ----------
 
     {
@@ -68,24 +68,21 @@
         }
     }
     
-2011-01-30 21:56:12,172--fetchInfo::DEBUG::
+2011-02-14 22:22:22,086--fetchInfo::DEBUG::
 ---------- RETURNING RESPONSE ----------
-{"pdResponse":{"userCode":"$P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/","demands":{"demand":[{"polls":{"poll":[{"folderID":"12160236","content":"Are having fun","id":"4443190","created":"2011-01-25 06:55:49","responses":0,"owner":1,"closed":0},{"folderID":"12160236","content":"Are you happy","id":"4443189","created":"2011-01-25 06:55:42","responses":0,"owner":1,"closed":0},{"folderID":"12160236","content":"This is your first poll, you can edit it to get started?","id":"4411448","created":"2011-01-19 03:19:45","responses":0,"owner":1,"closed":0}],"total":3},"id":"getpolls"}]},"partnerGUID":"67e37610-f575-8528-4ac8-0000523e46e2","partnerUserID":"1"}}
+{"pdResponse":{"userCode":"$P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/","demands":{"demand":[{"polls":{"total":0},"id":"getpolls"}]},"partnerGUID":"67e37610-f575-8528-4ac8-0000523e46e2","partnerUserID":"1"}}
 
 
-2011-01-30 21:56:12,172--getPollIDs::INFO::parsing:
-{"pdResponse":{"userCode":"$P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/","demands":{"demand":[{"polls":{"poll":[{"folderID":"12160236","content":"Are having fun","id":"4443190","created":"2011-01-25 06:55:49","responses":0,"owner":1,"closed":0},{"folderID":"12160236","content":"Are you happy","id":"4443189","created":"2011-01-25 06:55:42","responses":0,"owner":1,"closed":0},{"folderID":"12160236","content":"This is your first poll, you can edit it to get started?","id":"4411448","created":"2011-01-19 03:19:45","responses":0,"owner":1,"closed":0}],"total":3},"id":"getpolls"}]},"partnerGUID":"67e37610-f575-8528-4ac8-0000523e46e2","partnerUserID":"1"}}
+2011-02-14 22:22:22,086--getPollIDs::INFO::parsing:
+{"pdResponse":{"userCode":"$P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/","demands":{"demand":[{"polls":{"total":0},"id":"getpolls"}]},"partnerGUID":"67e37610-f575-8528-4ac8-0000523e46e2","partnerUserID":"1"}}
 
 
-2011-01-30 21:56:12,173--getPollIDs::DEBUG::Retrieved:
-[{u'responses': 0, u'created': u'2011-01-25 06:55:49', u'content': u'Are having fun', u'closed': 0, u'owner': 1, u'folderID': u'12160236', u'id': u'4443190'}, {u'responses': 0, u'created': u'2011-01-25 06:55:42', u'content': u'Are you happy', u'closed': 0, u'owner': 1, u'folderID': u'12160236', u'id': u'4443189'}, {u'responses': 0, u'created': u'2011-01-19 03:19:45', u'content': u'This is your first poll, you can edit it to get started?', u'closed': 0, u'owner': 1, u'folderID': u'12160236', u'id': u'4411448'}]
-2011-01-30 21:56:12,173--getPollIDs::INFO::Returning:
-{u'4443190': u'Are having fun', u'4411448': u'This is your first poll, you can edit it to get started?', u'4443189': u'Are you happy'}
-2011-01-30 21:57:27,376--__init__::DEBUG::Initialized object with uid - 67e37610-f575-8528-4ac8-0000523e46e2
-2011-01-30 21:57:27,376--fetchInfo::INFO::sending request to https://api.polldaddy.com/
-2011-01-30 21:57:27,376--fetchInfo::INFO::user-agent: Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.237 Safari/534.10
-2011-01-30 21:57:27,376--fetchInfo::INFO::headers: {'Content-Type': 'text/xml', 'Accept': 'text/*', 'User-Agent': 'Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.237 Safari/534.10'}
-2011-01-30 21:57:32,937--fetchInfo::DEBUG::
+2011-02-14 22:22:22,087--getPollIDs::WARNING::Returning an empty list
+2011-02-14 22:25:06,687--__init__::DEBUG::Initialized object with uid - 67e37610-f575-8528-4ac8-0000523e46e2
+2011-02-14 22:25:06,687--fetchInfo::INFO::sending request to https://api.polldaddy.com/
+2011-02-14 22:25:06,687--fetchInfo::INFO::user-agent: Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.237 Safari/534.10
+2011-02-14 22:25:06,687--fetchInfo::INFO::headers: {'Content-Type': 'text/xml', 'Accept': 'text/*', 'User-Agent': 'Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.237 Safari/534.10'}
+2011-02-14 22:25:12,204--fetchInfo::DEBUG::
 ---------- REQUEST PAYLOAD ----------
 
     {
@@ -100,19 +97,19 @@
         }
     }
     
-2011-01-30 21:57:32,937--fetchInfo::DEBUG::
+2011-02-14 22:25:12,204--fetchInfo::DEBUG::
 ---------- RETURNING RESPONSE ----------
 {"pdResponse":{"userCode":"$P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/","demands":{"demand":[]},"partnerGUID":"67e37610-f575-8528-4ac8-0000523e46e2","partnerUserID":"67e37610-f575-8528-4ac8-0000523e46e2"}}
 
 
-2011-01-30 21:57:32,938--getUserCodeJSON::DEBUG::returning {"pdResponse":{"userCode":"$P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/","demands":{"demand":[]},"partnerGUID":"67e37610-f575-8528-4ac8-0000523e46e2","partnerUserID":"67e37610-f575-8528-4ac8-0000523e46e2"}}
+2011-02-14 22:25:12,204--getUserCodeJSON::DEBUG::returning {"pdResponse":{"userCode":"$P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/","demands":{"demand":[]},"partnerGUID":"67e37610-f575-8528-4ac8-0000523e46e2","partnerUserID":"67e37610-f575-8528-4ac8-0000523e46e2"}}
 
 
-2011-01-30 21:57:32,938--parseUserCode::INFO::Parsing UserCode...
-2011-01-30 21:57:32,939--parseUserCode::DEBUG::return value set to: $P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/
-2011-01-30 21:57:32,939--parseUserCode::DEBUG::Returning $P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/
-2011-01-30 21:57:32,939--setUserCode::DEBUG::user code set to: $P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/
-2011-01-30 21:57:32,939--getPollsJSON::INFO::calling fetchInfo with 
+2011-02-14 22:25:12,205--parseUserCode::INFO::Parsing UserCode...
+2011-02-14 22:25:12,205--parseUserCode::DEBUG::return value set to: $P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/
+2011-02-14 22:25:12,205--parseUserCode::DEBUG::Returning $P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/
+2011-02-14 22:25:12,205--setUserCode::DEBUG::user code set to: $P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/
+2011-02-14 22:25:12,206--getPollsJSON::INFO::calling fetchInfo with 
     {
         "pdRequest": {
             "partnerGUID": "67e37610-f575-8528-4ac8-0000523e46e2",
@@ -129,10 +126,10 @@
         }
     }
     
-2011-01-30 21:57:32,939--fetchInfo::INFO::sending request to https://api.polldaddy.com/
-2011-01-30 21:57:32,940--fetchInfo::INFO::user-agent: Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.237 Safari/534.10
-2011-01-30 21:57:32,940--fetchInfo::INFO::headers: {'Content-Type': 'text/xml', 'Accept': 'text/*', 'User-Agent': 'Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.237 Safari/534.10'}
-2011-01-30 21:57:38,483--fetchInfo::DEBUG::
+2011-02-14 22:25:12,206--fetchInfo::INFO::sending request to https://api.polldaddy.com/
+2011-02-14 22:25:12,206--fetchInfo::INFO::user-agent: Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.237 Safari/534.10
+2011-02-14 22:25:12,206--fetchInfo::INFO::headers: {'Content-Type': 'text/xml', 'Accept': 'text/*', 'User-Agent': 'Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.237 Safari/534.10'}
+2011-02-14 22:25:17,719--fetchInfo::DEBUG::
 ---------- REQUEST PAYLOAD ----------
 
     {
@@ -151,24 +148,21 @@
         }
     }
     
-2011-01-30 21:57:38,483--fetchInfo::DEBUG::
+2011-02-14 22:25:17,720--fetchInfo::DEBUG::
 ---------- RETURNING RESPONSE ----------
-{"pdResponse":{"userCode":"$P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/","demands":{"demand":[{"polls":{"poll":[{"folderID":"12160236","content":"Are having fun","id":"4443190","created":"2011-01-25 06:55:49","responses":0,"owner":1,"closed":0},{"folderID":"12160236","content":"Are you happy","id":"4443189","created":"2011-01-25 06:55:42","responses":0,"owner":1,"closed":0},{"folderID":"12160236","content":"This is your first poll, you can edit it to get started?","id":"4411448","created":"2011-01-19 03:19:45","responses":0,"owner":1,"closed":0}],"total":3},"id":"getpolls"}]},"partnerGUID":"67e37610-f575-8528-4ac8-0000523e46e2","partnerUserID":"1"}}
+{"pdResponse":{"userCode":"$P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/","demands":{"demand":[{"polls":{"total":0},"id":"getpolls"}]},"partnerGUID":"67e37610-f575-8528-4ac8-0000523e46e2","partnerUserID":"1"}}
 
 
-2011-01-30 21:57:38,483--getPollIDs::INFO::parsing:
-{"pdResponse":{"userCode":"$P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/","demands":{"demand":[{"polls":{"poll":[{"folderID":"12160236","content":"Are having fun","id":"4443190","created":"2011-01-25 06:55:49","responses":0,"owner":1,"closed":0},{"folderID":"12160236","content":"Are you happy","id":"4443189","created":"2011-01-25 06:55:42","responses":0,"owner":1,"closed":0},{"folderID":"12160236","content":"This is your first poll, you can edit it to get started?","id":"4411448","created":"2011-01-19 03:19:45","responses":0,"owner":1,"closed":0}],"total":3},"id":"getpolls"}]},"partnerGUID":"67e37610-f575-8528-4ac8-0000523e46e2","partnerUserID":"1"}}
+2011-02-14 22:25:17,720--getPollIDs::INFO::parsing:
+{"pdResponse":{"userCode":"$P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/","demands":{"demand":[{"polls":{"total":0},"id":"getpolls"}]},"partnerGUID":"67e37610-f575-8528-4ac8-0000523e46e2","partnerUserID":"1"}}
 
 
-2011-01-30 21:57:38,485--getPollIDs::DEBUG::Retrieved:
-[{u'responses': 0, u'created': u'2011-01-25 06:55:49', u'content': u'Are having fun', u'closed': 0, u'owner': 1, u'folderID': u'12160236', u'id': u'4443190'}, {u'responses': 0, u'created': u'2011-01-25 06:55:42', u'content': u'Are you happy', u'closed': 0, u'owner': 1, u'folderID': u'12160236', u'id': u'4443189'}, {u'responses': 0, u'created': u'2011-01-19 03:19:45', u'content': u'This is your first poll, you can edit it to get started?', u'closed': 0, u'owner': 1, u'folderID': u'12160236', u'id': u'4411448'}]
-2011-01-30 21:57:38,485--getPollIDs::INFO::Returning:
-{u'4443190': u'Are having fun', u'4411448': u'This is your first poll, you can edit it to get started?', u'4443189': u'Are you happy'}
-2011-01-30 21:58:19,910--__init__::DEBUG::Initialized object with uid - 67e37610-f575-8528-4ac8-0000523e46e2
-2011-01-30 21:58:19,910--fetchInfo::INFO::sending request to https://api.polldaddy.com/
-2011-01-30 21:58:19,910--fetchInfo::INFO::user-agent: Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.237 Safari/534.10
-2011-01-30 21:58:19,910--fetchInfo::INFO::headers: {'Content-Type': 'text/xml', 'Accept': 'text/*', 'User-Agent': 'Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.237 Safari/534.10'}
-2011-01-30 21:58:25,510--fetchInfo::DEBUG::
+2011-02-14 22:25:17,721--getPollIDs::WARNING::Returning an empty list
+2011-02-14 22:25:33,582--__init__::DEBUG::Initialized object with uid - 67e37610-f575-8528-4ac8-0000523e46e2
+2011-02-14 22:25:33,582--fetchInfo::INFO::sending request to https://api.polldaddy.com/
+2011-02-14 22:25:33,582--fetchInfo::INFO::user-agent: Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.237 Safari/534.10
+2011-02-14 22:25:33,582--fetchInfo::INFO::headers: {'Content-Type': 'text/xml', 'Accept': 'text/*', 'User-Agent': 'Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.237 Safari/534.10'}
+2011-02-14 22:25:39,074--fetchInfo::DEBUG::
 ---------- REQUEST PAYLOAD ----------
 
     {
@@ -183,19 +177,19 @@
         }
     }
     
-2011-01-30 21:58:25,511--fetchInfo::DEBUG::
+2011-02-14 22:25:39,074--fetchInfo::DEBUG::
 ---------- RETURNING RESPONSE ----------
 {"pdResponse":{"userCode":"$P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/","demands":{"demand":[]},"partnerGUID":"67e37610-f575-8528-4ac8-0000523e46e2","partnerUserID":"67e37610-f575-8528-4ac8-0000523e46e2"}}
 
 
-2011-01-30 21:58:25,511--getUserCodeJSON::DEBUG::returning {"pdResponse":{"userCode":"$P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/","demands":{"demand":[]},"partnerGUID":"67e37610-f575-8528-4ac8-0000523e46e2","partnerUserID":"67e37610-f575-8528-4ac8-0000523e46e2"}}
+2011-02-14 22:25:39,074--getUserCodeJSON::DEBUG::returning {"pdResponse":{"userCode":"$P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/","demands":{"demand":[]},"partnerGUID":"67e37610-f575-8528-4ac8-0000523e46e2","partnerUserID":"67e37610-f575-8528-4ac8-0000523e46e2"}}
 
 
-2011-01-30 21:58:25,511--parseUserCode::INFO::Parsing UserCode...
-2011-01-30 21:58:25,512--parseUserCode::DEBUG::return value set to: $P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/
-2011-01-30 21:58:25,512--parseUserCode::DEBUG::Returning $P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/
-2011-01-30 21:58:25,512--setUserCode::DEBUG::user code set to: $P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/
-2011-01-30 21:58:25,512--getPollsJSON::INFO::calling fetchInfo with 
+2011-02-14 22:25:39,075--parseUserCode::INFO::Parsing UserCode...
+2011-02-14 22:25:39,075--parseUserCode::DEBUG::return value set to: $P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/
+2011-02-14 22:25:39,075--parseUserCode::DEBUG::Returning $P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/
+2011-02-14 22:25:39,075--setUserCode::DEBUG::user code set to: $P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/
+2011-02-14 22:25:39,076--getPollsJSON::INFO::calling fetchInfo with 
     {
         "pdRequest": {
             "partnerGUID": "67e37610-f575-8528-4ac8-0000523e46e2",
@@ -212,10 +206,10 @@
         }
     }
     
-2011-01-30 21:58:25,513--fetchInfo::INFO::sending request to https://api.polldaddy.com/
-2011-01-30 21:58:25,513--fetchInfo::INFO::user-agent: Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.237 Safari/534.10
-2011-01-30 21:58:25,513--fetchInfo::INFO::headers: {'Content-Type': 'text/xml', 'Accept': 'text/*', 'User-Agent': 'Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.237 Safari/534.10'}
-2011-01-30 21:58:31,045--fetchInfo::DEBUG::
+2011-02-14 22:25:39,076--fetchInfo::INFO::sending request to https://api.polldaddy.com/
+2011-02-14 22:25:39,076--fetchInfo::INFO::user-agent: Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.237 Safari/534.10
+2011-02-14 22:25:39,076--fetchInfo::INFO::headers: {'Content-Type': 'text/xml', 'Accept': 'text/*', 'User-Agent': 'Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.237 Safari/534.10'}
+2011-02-14 22:25:44,585--fetchInfo::DEBUG::
 ---------- REQUEST PAYLOAD ----------
 
     {
@@ -234,24 +228,21 @@
         }
     }
     
-2011-01-30 21:58:31,046--fetchInfo::DEBUG::
+2011-02-14 22:25:44,585--fetchInfo::DEBUG::
 ---------- RETURNING RESPONSE ----------
-{"pdResponse":{"userCode":"$P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/","demands":{"demand":[{"polls":{"poll":[{"folderID":"12160236","content":"Are having fun","id":"4443190","created":"2011-01-25 06:55:49","responses":0,"owner":1,"closed":0},{"folderID":"12160236","content":"Are you happy","id":"4443189","created":"2011-01-25 06:55:42","responses":0,"owner":1,"closed":0},{"folderID":"12160236","content":"This is your first poll, you can edit it to get started?","id":"4411448","created":"2011-01-19 03:19:45","responses":0,"owner":1,"closed":0}],"total":3},"id":"getpolls"}]},"partnerGUID":"67e37610-f575-8528-4ac8-0000523e46e2","partnerUserID":"1"}}
+{"pdResponse":{"userCode":"$P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/","demands":{"demand":[{"polls":{"total":0},"id":"getpolls"}]},"partnerGUID":"67e37610-f575-8528-4ac8-0000523e46e2","partnerUserID":"1"}}
 
 
-2011-01-30 21:58:31,046--getPollIDs::INFO::parsing:
-{"pdResponse":{"userCode":"$P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/","demands":{"demand":[{"polls":{"poll":[{"folderID":"12160236","content":"Are having fun","id":"4443190","created":"2011-01-25 06:55:49","responses":0,"owner":1,"closed":0},{"folderID":"12160236","content":"Are you happy","id":"4443189","created":"2011-01-25 06:55:42","responses":0,"owner":1,"closed":0},{"folderID":"12160236","content":"This is your first poll, you can edit it to get started?","id":"4411448","created":"2011-01-19 03:19:45","responses":0,"owner":1,"closed":0}],"total":3},"id":"getpolls"}]},"partnerGUID":"67e37610-f575-8528-4ac8-0000523e46e2","partnerUserID":"1"}}
+2011-02-14 22:25:44,585--getPollIDs::INFO::parsing:
+{"pdResponse":{"userCode":"$P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/","demands":{"demand":[{"polls":{"total":0},"id":"getpolls"}]},"partnerGUID":"67e37610-f575-8528-4ac8-0000523e46e2","partnerUserID":"1"}}
 
 
-2011-01-30 21:58:31,047--getPollIDs::DEBUG::Retrieved:
-[{u'responses': 0, u'created': u'2011-01-25 06:55:49', u'content': u'Are having fun', u'closed': 0, u'owner': 1, u'folderID': u'12160236', u'id': u'4443190'}, {u'responses': 0, u'created': u'2011-01-25 06:55:42', u'content': u'Are you happy', u'closed': 0, u'owner': 1, u'folderID': u'12160236', u'id': u'4443189'}, {u'responses': 0, u'created': u'2011-01-19 03:19:45', u'content': u'This is your first poll, you can edit it to get started?', u'closed': 0, u'owner': 1, u'folderID': u'12160236', u'id': u'4411448'}]
-2011-01-30 21:58:31,047--getPollIDs::INFO::Returning:
-{u'4443190': u'Are having fun', u'4411448': u'This is your first poll, you can edit it to get started?', u'4443189': u'Are you happy'}
-2011-01-30 21:59:32,329--__init__::DEBUG::Initialized object with uid - 67e37610-f575-8528-4ac8-0000523e46e2
-2011-01-30 21:59:32,329--fetchInfo::INFO::sending request to https://api.polldaddy.com/
-2011-01-30 21:59:32,329--fetchInfo::INFO::user-agent: Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.237 Safari/534.10
-2011-01-30 21:59:32,329--fetchInfo::INFO::headers: {'Content-Type': 'text/xml', 'Accept': 'text/*', 'User-Agent': 'Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.237 Safari/534.10'}
-2011-01-30 21:59:37,932--fetchInfo::DEBUG::
+2011-02-14 22:25:44,586--getPollIDs::WARNING::Returning an empty list
+2011-02-14 22:28:24,979--__init__::DEBUG::Initialized object with uid - 67e37610-f575-8528-4ac8-0000523e46e2
+2011-02-14 22:28:24,979--fetchInfo::INFO::sending request to https://api.polldaddy.com/
+2011-02-14 22:28:24,979--fetchInfo::INFO::user-agent: Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.237 Safari/534.10
+2011-02-14 22:28:24,979--fetchInfo::INFO::headers: {'Content-Type': 'text/xml', 'Accept': 'text/*', 'User-Agent': 'Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.237 Safari/534.10'}
+2011-02-14 22:28:25,617--fetchInfo::DEBUG::
 ---------- REQUEST PAYLOAD ----------
 
     {
@@ -266,19 +257,19 @@
         }
     }
     
-2011-01-30 21:59:37,932--fetchInfo::DEBUG::
+2011-02-14 22:28:25,618--fetchInfo::DEBUG::
 ---------- RETURNING RESPONSE ----------
 {"pdResponse":{"userCode":"$P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/","demands":{"demand":[]},"partnerGUID":"67e37610-f575-8528-4ac8-0000523e46e2","partnerUserID":"67e37610-f575-8528-4ac8-0000523e46e2"}}
 
 
-2011-01-30 21:59:37,932--getUserCodeJSON::DEBUG::returning {"pdResponse":{"userCode":"$P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/","demands":{"demand":[]},"partnerGUID":"67e37610-f575-8528-4ac8-0000523e46e2","partnerUserID":"67e37610-f575-8528-4ac8-0000523e46e2"}}
+2011-02-14 22:28:25,618--getUserCodeJSON::DEBUG::returning {"pdResponse":{"userCode":"$P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/","demands":{"demand":[]},"partnerGUID":"67e37610-f575-8528-4ac8-0000523e46e2","partnerUserID":"67e37610-f575-8528-4ac8-0000523e46e2"}}
 
 
-2011-01-30 21:59:37,932--parseUserCode::INFO::Parsing UserCode...
-2011-01-30 21:59:37,932--parseUserCode::DEBUG::return value set to: $P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/
-2011-01-30 21:59:37,932--parseUserCode::DEBUG::Returning $P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/
-2011-01-30 21:59:37,933--setUserCode::DEBUG::user code set to: $P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/
-2011-01-30 21:59:37,933--getPollsJSON::INFO::calling fetchInfo with 
+2011-02-14 22:28:25,618--parseUserCode::INFO::Parsing UserCode...
+2011-02-14 22:28:25,619--parseUserCode::DEBUG::return value set to: $P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/
+2011-02-14 22:28:25,619--parseUserCode::DEBUG::Returning $P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/
+2011-02-14 22:28:25,619--setUserCode::DEBUG::user code set to: $P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/
+2011-02-14 22:28:25,619--getPollsJSON::INFO::calling fetchInfo with 
     {
         "pdRequest": {
             "partnerGUID": "67e37610-f575-8528-4ac8-0000523e46e2",
@@ -295,10 +286,10 @@
         }
     }
     
-2011-01-30 21:59:37,933--fetchInfo::INFO::sending request to https://api.polldaddy.com/
-2011-01-30 21:59:37,933--fetchInfo::INFO::user-agent: Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.237 Safari/534.10
-2011-01-30 21:59:37,933--fetchInfo::INFO::headers: {'Content-Type': 'text/xml', 'Accept': 'text/*', 'User-Agent': 'Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.237 Safari/534.10'}
-2011-01-30 21:59:43,545--fetchInfo::DEBUG::
+2011-02-14 22:28:25,619--fetchInfo::INFO::sending request to https://api.polldaddy.com/
+2011-02-14 22:28:25,620--fetchInfo::INFO::user-agent: Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.237 Safari/534.10
+2011-02-14 22:28:25,620--fetchInfo::INFO::headers: {'Content-Type': 'text/xml', 'Accept': 'text/*', 'User-Agent': 'Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.237 Safari/534.10'}
+2011-02-14 22:28:31,134--fetchInfo::DEBUG::
 ---------- REQUEST PAYLOAD ----------
 
     {
@@ -317,20 +308,19 @@
         }
     }
     
-2011-01-30 21:59:43,545--fetchInfo::DEBUG::
+2011-02-14 22:28:31,134--fetchInfo::DEBUG::
 ---------- RETURNING RESPONSE ----------
-{"pdResponse":{"userCode":"$P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/","demands":{"demand":[{"polls":{"poll":[{"folderID":"12160236","content":"Are having fun","id":"4443190","created":"2011-01-25 06:55:49","responses":0,"owner":1,"closed":0},{"folderID":"12160236","content":"Are you happy","id":"4443189","created":"2011-01-25 06:55:42","responses":0,"owner":1,"closed":0},{"folderID":"12160236","content":"This is your first poll, you can edit it to get started?","id":"4411448","created":"2011-01-19 03:19:45","responses":0,"owner":1,"closed":0}],"total":3},"id":"getpolls"}]},"partnerGUID":"67e37610-f575-8528-4ac8-0000523e46e2","partnerUserID":"1"}}
+{"pdResponse":{"userCode":"$P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/","demands":{"demand":[{"polls":{"total":0},"id":"getpolls"}]},"partnerGUID":"67e37610-f575-8528-4ac8-0000523e46e2","partnerUserID":"1"}}
 
 
-2011-01-30 21:59:43,545--getPollIDs::INFO::parsing:
-{"pdResponse":{"userCode":"$P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/","demands":{"demand":[{"polls":{"poll":[{"folderID":"12160236","content":"Are having fun","id":"4443190","created":"2011-01-25 06:55:49","responses":0,"owner":1,"closed":0},{"folderID":"12160236","content":"Are you happy","id":"4443189","created":"2011-01-25 06:55:42","responses":0,"owner":1,"closed":0},{"folderID":"12160236","content":"This is your first poll, you can edit it to get started?","id":"4411448","created":"2011-01-19 03:19:45","responses":0,"owner":1,"closed":0}],"total":3},"id":"getpolls"}]},"partnerGUID":"67e37610-f575-8528-4ac8-0000523e46e2","partnerUserID":"1"}}
+2011-02-14 22:28:31,134--getPollIDs::INFO::parsing:
+{"pdResponse":{"userCode":"$P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/","demands":{"demand":[{"polls":{"total":0},"id":"getpolls"}]},"partnerGUID":"67e37610-f575-8528-4ac8-0000523e46e2","partnerUserID":"1"}}
 
 
-2011-01-30 21:59:43,546--getPollIDs::DEBUG::Retrieved:
-[{u'responses': 0, u'created': u'2011-01-25 06:55:49', u'content': u'Are having fun', u'closed': 0, u'owner': 1, u'folderID': u'12160236', u'id': u'4443190'}, {u'responses': 0, u'created': u'2011-01-25 06:55:42', u'content': u'Are you happy', u'closed': 0, u'owner': 1, u'folderID': u'12160236', u'id': u'4443189'}, {u'responses': 0, u'created': u'2011-01-19 03:19:45', u'content': u'This is your first poll, you can edit it to get started?', u'closed': 0, u'owner': 1, u'folderID': u'12160236', u'id': u'4411448'}]
-2011-01-30 21:59:43,546--getPollIDs::INFO::Returning:
-{u'4443190': u'Are having fun', u'4411448': u'This is your first poll, you can edit it to get started?', u'4443189': u'Are you happy'}
-2011-01-30 21:59:43,546--getPollJSON::INFO::calling fetchInfo with 
+2011-02-14 22:28:31,135--getPollIDs::WARNING::Returning an empty list
+2011-02-14 22:29:10,501--__init__::DEBUG::Initialized object with uid - 67e37610-f575-8528-4ac8-0000523e46e2
+2011-02-14 22:29:10,501--setUserCode::DEBUG::user code set to: $P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/
+2011-02-14 22:29:10,501--createPollJSON::INFO::calling fetchInfo with 
     {
         "pdRequest": {
             "partnerGUID": "67e37610-f575-8528-4ac8-0000523e46e2",
@@ -338,17 +328,44 @@
             "demands": {
                 "demand": {
                     "poll": {
-                        "id": "4443190"
-                    }, "id": "GetPoll"
+                        "question": "Did you eat dinner",
+                        "multipleChoice": "yes",
+                        "randomiseAnswers": "no",
+                        "otherAnswer": {
+                            "content": "no"
+                        },
+                        "resultsType": "percent",
+                        "blockRepeatVotersType": "cookie",
+                        "blockExpiration": "7200000",
+                        "comments": {
+                            "content": "allow"
+                        },
+                        "makePublic": "yes",
+                        "closePoll": "no",
+                        "closeDate": "0",
+                        "styleID": "0",
+                        "packID": "0",
+                        "folderID": "0",
+                        "languageID": "0",
+                        "sharing": "no",
+                        "answers": {
+                            "answer": 
+        [{
+            "text": "yes"
+        }, {
+            "text": "no"
+        }]
+                        }
+                    }, "id": "CreatePoll"
                 }
             }
         }
     }
     
-2011-01-30 21:59:43,546--fetchInfo::INFO::sending request to https://api.polldaddy.com/
-2011-01-30 21:59:43,547--fetchInfo::INFO::user-agent: Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.237 Safari/534.10
-2011-01-30 21:59:43,547--fetchInfo::INFO::headers: {'Content-Type': 'text/xml', 'Accept': 'text/*', 'User-Agent': 'Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.237 Safari/534.10'}
-2011-01-30 21:59:49,098--fetchInfo::DEBUG::
+2011-02-14 22:29:10,501--fetchInfo::INFO::sending request to https://api.polldaddy.com/
+2011-02-14 22:29:10,501--fetchInfo::INFO::user-agent: Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.237 Safari/534.10
+2011-02-14 22:29:10,501--fetchInfo::INFO::headers: {'Content-Type': 'text/xml', 'Accept': 'text/*', 'User-Agent': 'Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.237 Safari/534.10'}
+2011-02-14 22:29:16,894--fetchInfo::DEBUG::
 ---------- REQUEST PAYLOAD ----------
 
     {
@@ -358,15 +375,208 @@
             "demands": {
                 "demand": {
                     "poll": {
-                        "id": "4443190"
-                    }, "id": "GetPoll"
+                        "question": "Did you eat dinner",
+                        "multipleChoice": "yes",
+                        "randomiseAnswers": "no",
+                        "otherAnswer": {
+                            "content": "no"
+                        },
+                        "resultsType": "percent",
+                        "blockRepeatVotersType": "cookie",
+                        "blockExpiration": "7200000",
+                        "comments": {
+                            "content": "allow"
+                        },
+                        "makePublic": "yes",
+                        "closePoll": "no",
+                        "closeDate": "0",
+                        "styleID": "0",
+                        "packID": "0",
+                        "folderID": "0",
+                        "languageID": "0",
+                        "sharing": "no",
+                        "answers": {
+                            "answer": 
+        [{
+            "text": "yes"
+        }, {
+            "text": "no"
+        }]
+                        }
+                    }, "id": "CreatePoll"
                 }
             }
         }
     }
     
-2011-01-30 21:59:49,098--fetchInfo::DEBUG::
+2011-02-14 22:29:16,895--fetchInfo::DEBUG::
 ---------- RETURNING RESPONSE ----------
-{"pdResponse":{"userCode":"$P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/","demands":{"demand":[{"poll":{"question":"Are having fun","multipleChoice":"yes","randomiseAnswers":"no","otherAnswer":"no","resultsType":"percent","blockRepeatVotersType":"cookie","blockExpiration":7200000,"comments":"allow","makePublic":"yes","closePoll":"no","closeDate":"1970-01-01 00:00:00","styleID":"105","packID":"0","folderID":"12160236","languageID":"0","parentID":"0","keyword":"survey software","sharing":"no","mediaType":"0","mediaCode":"","answers":{"answer":[{"text":"yes","mediaType":"0","mediaCode":"","id":"19810517"},{"text":"no","mediaType":"0","mediaCode":"","id":"19810518"}]},"id":"4443190","owner":"1"},"id":"getpoll"}]},"partnerGUID":"67e37610-f575-8528-4ac8-0000523e46e2","partnerUserID":"1"}}
+{"pdResponse":{"userCode":"$P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/","demands":{"demand":[{"poll":{"question":"Did you eat dinner","multipleChoice":"yes","randomiseAnswers":"no","otherAnswer":"no","resultsType":"percent","blockRepeatVotersType":"cookie","blockExpiration":7200000,"comments":"allow","makePublic":"yes","closePoll":"no","closeDate":"1970-01-01 00:00:00","styleID":"105","packID":"0","folderID":"12160236","languageID":"0","parentID":"0","keyword":"Market Research","sharing":"no","mediaType":"0","mediaCode":"","answers":{"answer":[{"text":"yes","mediaType":"0","mediaCode":"","id":"20250534"},{"text":"no","mediaType":"0","mediaCode":"","id":"20250535"}]},"id":"4554952","owner":"1"},"id":"getpoll"}]},"partnerGUID":"67e37610-f575-8528-4ac8-0000523e46e2","partnerUserID":"1"}}
 
 
+2011-02-14 22:29:19,991--__init__::DEBUG::Initialized object with uid - 67e37610-f575-8528-4ac8-0000523e46e2
+2011-02-14 22:29:19,992--fetchInfo::INFO::sending request to https://api.polldaddy.com/
+2011-02-14 22:29:19,992--fetchInfo::INFO::user-agent: Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.237 Safari/534.10
+2011-02-14 22:29:19,992--fetchInfo::INFO::headers: {'Content-Type': 'text/xml', 'Accept': 'text/*', 'User-Agent': 'Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.237 Safari/534.10'}
+2011-02-14 22:29:25,488--fetchInfo::DEBUG::
+---------- REQUEST PAYLOAD ----------
+
+    {
+        "pdAccess": {
+            "partnerGUID": "67e37610-f575-8528-4ac8-0000523e46e2",
+            "partnerUserID": "67e37610-f575-8528-4ac8-0000523e46e2",
+            "demands": {
+                "demand": {
+                    "id": "GetUserCode"
+                }
+            }
+        }
+    }
+    
+2011-02-14 22:29:25,489--fetchInfo::DEBUG::
+---------- RETURNING RESPONSE ----------
+{"pdResponse":{"userCode":"$P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/","demands":{"demand":[]},"partnerGUID":"67e37610-f575-8528-4ac8-0000523e46e2","partnerUserID":"67e37610-f575-8528-4ac8-0000523e46e2"}}
+
+
+2011-02-14 22:29:25,489--getUserCodeJSON::DEBUG::returning {"pdResponse":{"userCode":"$P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/","demands":{"demand":[]},"partnerGUID":"67e37610-f575-8528-4ac8-0000523e46e2","partnerUserID":"67e37610-f575-8528-4ac8-0000523e46e2"}}
+
+
+2011-02-14 22:29:25,489--parseUserCode::INFO::Parsing UserCode...
+2011-02-14 22:29:25,489--parseUserCode::DEBUG::return value set to: $P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/
+2011-02-14 22:29:25,490--parseUserCode::DEBUG::Returning $P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/
+2011-02-14 22:29:25,490--setUserCode::DEBUG::user code set to: $P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/
+2011-02-14 22:29:25,490--getPollsJSON::INFO::calling fetchInfo with 
+    {
+        "pdRequest": {
+            "partnerGUID": "67e37610-f575-8528-4ac8-0000523e46e2",
+            "userCode": "$P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/",
+            "demands": {
+                "demand": {
+                    "list": {
+                        "start": "0",
+                        "end": "0",
+                        "id": "$P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/"
+                    }, "id": "GetPolls"
+                }
+            }
+        }
+    }
+    
+2011-02-14 22:29:25,490--fetchInfo::INFO::sending request to https://api.polldaddy.com/
+2011-02-14 22:29:25,490--fetchInfo::INFO::user-agent: Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.237 Safari/534.10
+2011-02-14 22:29:25,490--fetchInfo::INFO::headers: {'Content-Type': 'text/xml', 'Accept': 'text/*', 'User-Agent': 'Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.237 Safari/534.10'}
+2011-02-14 22:29:31,004--fetchInfo::DEBUG::
+---------- REQUEST PAYLOAD ----------
+
+    {
+        "pdRequest": {
+            "partnerGUID": "67e37610-f575-8528-4ac8-0000523e46e2",
+            "userCode": "$P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/",
+            "demands": {
+                "demand": {
+                    "list": {
+                        "start": "0",
+                        "end": "0",
+                        "id": "$P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/"
+                    }, "id": "GetPolls"
+                }
+            }
+        }
+    }
+    
+2011-02-14 22:29:31,004--fetchInfo::DEBUG::
+---------- RETURNING RESPONSE ----------
+{"pdResponse":{"userCode":"$P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/","demands":{"demand":[{"polls":{"poll":[{"folderID":"12160236","content":"Did you eat dinner","id":"4554952","created":"2011-02-15 06:33:27","responses":0,"owner":1,"closed":0}],"total":1},"id":"getpolls"}]},"partnerGUID":"67e37610-f575-8528-4ac8-0000523e46e2","partnerUserID":"1"}}
+
+
+2011-02-14 22:29:31,005--getPollIDs::INFO::parsing:
+{"pdResponse":{"userCode":"$P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/","demands":{"demand":[{"polls":{"poll":[{"folderID":"12160236","content":"Did you eat dinner","id":"4554952","created":"2011-02-15 06:33:27","responses":0,"owner":1,"closed":0}],"total":1},"id":"getpolls"}]},"partnerGUID":"67e37610-f575-8528-4ac8-0000523e46e2","partnerUserID":"1"}}
+
+
+2011-02-14 22:29:31,006--getPollIDs::DEBUG::Retrieved:
+[{u'responses': 0, u'created': u'2011-02-15 06:33:27', u'content': u'Did you eat dinner', u'closed': 0, u'owner': 1, u'folderID': u'12160236', u'id': u'4554952'}]
+2011-02-14 22:29:31,006--getPollIDs::INFO::Returning:
+{u'4554952': u'Did you eat dinner'}
+2011-02-15 20:45:27,170--__init__::DEBUG::Initialized object with uid - 67e37610-f575-8528-4ac8-0000523e46e2
+2011-02-15 20:45:27,170--fetchInfo::INFO::sending request to https://api.polldaddy.com/
+2011-02-15 20:45:27,170--fetchInfo::INFO::user-agent: Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.237 Safari/534.10
+2011-02-15 20:45:27,170--fetchInfo::INFO::headers: {'Content-Type': 'text/xml', 'Accept': 'text/*', 'User-Agent': 'Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.237 Safari/534.10'}
+2011-02-15 20:45:27,796--fetchInfo::DEBUG::
+---------- REQUEST PAYLOAD ----------
+
+    {
+        "pdAccess": {
+            "partnerGUID": "67e37610-f575-8528-4ac8-0000523e46e2",
+            "partnerUserID": "67e37610-f575-8528-4ac8-0000523e46e2",
+            "demands": {
+                "demand": {
+                    "id": "GetUserCode"
+                }
+            }
+        }
+    }
+    
+2011-02-15 20:45:27,796--fetchInfo::DEBUG::
+---------- RETURNING RESPONSE ----------
+{"pdResponse":{"userCode":"$P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/","demands":{"demand":[]},"partnerGUID":"67e37610-f575-8528-4ac8-0000523e46e2","partnerUserID":"67e37610-f575-8528-4ac8-0000523e46e2"}}
+
+
+2011-02-15 20:45:27,796--getUserCodeJSON::DEBUG::returning {"pdResponse":{"userCode":"$P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/","demands":{"demand":[]},"partnerGUID":"67e37610-f575-8528-4ac8-0000523e46e2","partnerUserID":"67e37610-f575-8528-4ac8-0000523e46e2"}}
+
+
+2011-02-15 20:45:27,796--parseUserCode::INFO::Parsing UserCode...
+2011-02-15 20:45:27,797--parseUserCode::DEBUG::return value set to: $P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/
+2011-02-15 20:45:27,797--parseUserCode::DEBUG::Returning $P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/
+2011-02-15 20:45:27,797--setUserCode::DEBUG::user code set to: $P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/
+2011-02-15 20:45:27,797--getPollsJSON::INFO::calling fetchInfo with 
+    {
+        "pdRequest": {
+            "partnerGUID": "67e37610-f575-8528-4ac8-0000523e46e2",
+            "userCode": "$P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/",
+            "demands": {
+                "demand": {
+                    "list": {
+                        "start": "0",
+                        "end": "0",
+                        "id": "$P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/"
+                    }, "id": "GetPolls"
+                }
+            }
+        }
+    }
+    
+2011-02-15 20:45:27,798--fetchInfo::INFO::sending request to https://api.polldaddy.com/
+2011-02-15 20:45:27,798--fetchInfo::INFO::user-agent: Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.237 Safari/534.10
+2011-02-15 20:45:27,798--fetchInfo::INFO::headers: {'Content-Type': 'text/xml', 'Accept': 'text/*', 'User-Agent': 'Mozilla/5.0 (X11; U; Linux x86_64; en-US) AppleWebKit/534.10 (KHTML, like Gecko) Chrome/8.0.552.237 Safari/534.10'}
+2011-02-15 20:45:33,349--fetchInfo::DEBUG::
+---------- REQUEST PAYLOAD ----------
+
+    {
+        "pdRequest": {
+            "partnerGUID": "67e37610-f575-8528-4ac8-0000523e46e2",
+            "userCode": "$P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/",
+            "demands": {
+                "demand": {
+                    "list": {
+                        "start": "0",
+                        "end": "0",
+                        "id": "$P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/"
+                    }, "id": "GetPolls"
+                }
+            }
+        }
+    }
+    
+2011-02-15 20:45:33,350--fetchInfo::DEBUG::
+---------- RETURNING RESPONSE ----------
+{"pdResponse":{"userCode":"$P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/","demands":{"demand":[{"polls":{"poll":[{"folderID":"12160236","content":"Did you eat dinner","id":"4554952","created":"2011-02-15 06:33:27","responses":0,"owner":1,"closed":0}],"total":1},"id":"getpolls"}]},"partnerGUID":"67e37610-f575-8528-4ac8-0000523e46e2","partnerUserID":"1"}}
+
+
+2011-02-15 20:45:33,350--getPollIDs::INFO::parsing:
+{"pdResponse":{"userCode":"$P$BysIUMlf6Mgflg25ShO0jSjwXbofF1\/","demands":{"demand":[{"polls":{"poll":[{"folderID":"12160236","content":"Did you eat dinner","id":"4554952","created":"2011-02-15 06:33:27","responses":0,"owner":1,"closed":0}],"total":1},"id":"getpolls"}]},"partnerGUID":"67e37610-f575-8528-4ac8-0000523e46e2","partnerUserID":"1"}}
+
+
+2011-02-15 20:45:33,351--getPollIDs::DEBUG::Retrieved:
+[{u'responses': 0, u'created': u'2011-02-15 06:33:27', u'content': u'Did you eat dinner', u'closed': 0, u'owner': 1, u'folderID': u'12160236', u'id': u'4554952'}]
+2011-02-15 20:45:33,351--getPollIDs::INFO::Returning:
+{u'4554952': u'Did you eat dinner'}

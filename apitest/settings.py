@@ -1,7 +1,6 @@
 # Django settings for apitest project.
 
-#POLLDADDY_API_KEY = '67e37610-f575-8528-4ac8-0000523e46e2' # API key for polldaddy
-
+PD_API_KEY = '67e37610-f575-8528-4ac8-0000523e46e2' #API KEY or User ID
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 #APPEND_SLASH=False
