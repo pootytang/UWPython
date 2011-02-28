@@ -1,11 +1,8 @@
 {% extends 'base.html' %}
 
 {% block login_logout %}
-    {% if loggedin %}
-        <a href="/accounts/logout/">Logout</a>
-    {% else %}
-        <a href="/accounts/login/">Login</a>
-    {% endif %}
+    <a href="/accounts/logout/">Logout</a>
+    <a href="/events/all_my_events/">View Your Events</a>
 {% endblock %}
 
 {% block content %}

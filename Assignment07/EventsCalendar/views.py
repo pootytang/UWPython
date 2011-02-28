@@ -141,6 +141,11 @@ def add_location(request):
                 r = HttpResponseRedirect('/events/')
     return r
 
+def all_user_events(request):
+    user = request.user
+    events = Event.objects.filter(user__id=user.id)
+    return render_to_response('EventsCalendar/allmyevents.html', {'events':events, 'u':user.username})
+
 def register(request):
     # copied from http://www.djangobook.com/en/2.0/chapter14/
     if request.method == 'POST':

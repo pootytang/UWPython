@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block login_logout %}
+    <a href="/accounts/logout/">Logout</a>
+{% endblock %}
+
+{% block content %}
+    <div class="details">
+        <ul><span>Events for {{ u }}:</span><br />
+            {% for event in events %}
+                <li><a href="/events/details/{{ event.id }}">{{ event.title }}</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+{% endblock %}

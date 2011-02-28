@@ -22,7 +22,35 @@
     <favorites_list name="Assignment07" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf>
+      <file leaf-file-name="allmyevents.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/EventsCalendar/allmyevents.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="41" selection-start="287" selection-end="287" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/EventsCalendar/views.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="146" column="11" selection-start="5227" selection-end="5227" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="details.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/templates/EventsCalendar/details.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="6" column="0" selection-start="168" selection-end="168" vertical-scroll-proportion="0.10989011">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FindManager">
     <FindUsagesManager>
@@ -32,22 +60,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/templates/registration/login.html" />
-        <option value="$PROJECT_DIR$/templates/registration/logged_out.html" />
         <option value="$PROJECT_DIR$/templates/registration/register.html" />
         <option value="$PROJECT_DIR$/EventsCalendar/MyHTMLCalendar.py" />
         <option value="$PROJECT_DIR$/templates/base.html" />
-        <option value="$PROJECT_DIR$/templates/EventsCalendar/index.html" />
         <option value="$PROJECT_DIR$/urls.py" />
-        <option value="$PROJECT_DIR$/templates/EventsCalendar/details.html" />
-        <option value="$PROJECT_DIR$/templates/EventsCalendar/results.html" />
         <option value="$PROJECT_DIR$/settings.py" />
         <option value="$PROJECT_DIR$/templates/EventsCalendar/add.html" />
         <option value="$PROJECT_DIR$/EventsCalendar/models.py" />
         <option value="$PROJECT_DIR$/EventsCalendar/urls.py" />
-        <option value="$PROJECT_DIR$/templates/EventsCalendar/add_location.html" />
-        <option value="$PROJECT_DIR$/EventsCalendar/views.py" />
+        <option value="$PROJECT_DIR$/templates/EventsCalendar/allmyevents.html" />
         <option value="$PROJECT_DIR$/event_media/events.css" />
+        <option value="$PROJECT_DIR$/templates/EventsCalendar/index.html" />
+        <option value="$PROJECT_DIR$/templates/EventsCalendar/results.html" />
+        <option value="$PROJECT_DIR$/templates/EventsCalendar/add_location.html" />
+        <option value="$PROJECT_DIR$/templates/EventsCalendar/add_event.html" />
+        <option value="$PROJECT_DIR$/EventsCalendar/views.py" />
+        <option value="$PROJECT_DIR$/templates/EventsCalendar/details.html" />
       </list>
     </option>
   </component>
@@ -77,6 +105,7 @@
       <sortByType />
     </navigator>
     <panes>
+      <pane id="Favorites" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -106,24 +135,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Assignment07" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Assignment07" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="templates" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="registration" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -175,7 +186,6 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="Favorites" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -301,13 +311,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="927" y="73" width="988" height="1023" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Dependency Viewer" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24324325" sideWeight="0.67049366" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24324325" sideWeight="0.67049366" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3295063" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -358,23 +368,41 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/templates/registration/logged_out.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="0" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/templates/registration/register.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="11" selection-start="319" selection-end="319" vertical-scroll-proportion="0.23131673">
-          <folding />
-        </state>
+        <state line="13" column="11" selection-start="319" selection-end="319" vertical-scroll-proportion="0.23131673" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/EventsCalendar/MyHTMLCalendar.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="32" column="29" selection-start="1238" selection-end="1238" vertical-scroll-proportion="0.4759036">
+        <state line="32" column="29" selection-start="1238" selection-end="1238" vertical-scroll-proportion="0.4759036" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/registration/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="38" selection-start="533" selection-end="533" vertical-scroll-proportion="0.3380783" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="19" column="30" selection-start="555" selection-end="555" vertical-scroll-proportion="0.3433735" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EventsCalendar/models.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="56" column="35" selection-start="2623" selection-end="2623" vertical-scroll-proportion="0.78647685">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="23" column="0" selection-start="797" selection-end="797" vertical-scroll-proportion="0.40925267" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/EventsCalendar/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="21" selection-start="376" selection-end="389" vertical-scroll-proportion="0.18203883">
           <folding />
         </state>
       </provider>
@@ -386,86 +414,58 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/registration/login.html">
+    <entry file="file://$PROJECT_DIR$/event_media/events.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="38" selection-start="533" selection-end="533" vertical-scroll-proportion="0.3380783">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/EventsCalendar/results.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="212" selection-end="212" vertical-scroll-proportion="0.16875">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/EventsCalendar/details.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="14" selection-start="232" selection-end="232" vertical-scroll-proportion="0.18315019">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/EventsCalendar/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="10" selection-start="27" selection-end="211" vertical-scroll-proportion="0.10989011">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="19" column="30" selection-start="555" selection-end="555" vertical-scroll-proportion="0.3433735">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EventsCalendar/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="56" column="35" selection-start="2623" selection-end="2623" vertical-scroll-proportion="0.78647685">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/EventsCalendar/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="41" selection-start="367" selection-end="367" vertical-scroll-proportion="0.16014235">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/urls.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="23" column="0" selection-start="797" selection-end="797" vertical-scroll-proportion="0.40925267">
+        <state line="68" column="16" selection-start="904" selection-end="904" vertical-scroll-proportion="0.60854095">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/EventsCalendar/add_event.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="14" selection-start="213" selection-end="582" vertical-scroll-proportion="-13.125">
+        <state line="4" column="4" selection-start="99" selection-end="99" vertical-scroll-proportion="0.075">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/EventsCalendar/add_location.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="17" column="74" selection-start="483" selection-end="483" vertical-scroll-proportion="0.0">
+        <state line="4" column="4" selection-start="99" selection-end="99" vertical-scroll-proportion="0.07326008">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/event_media/events.css">
+    <entry file="file://$PROJECT_DIR$/templates/EventsCalendar/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="42" column="32" selection-start="534" selection-end="534" vertical-scroll-proportion="0.4128114">
+        <state line="4" column="4" selection-start="99" selection-end="99" vertical-scroll-proportion="0.07326008">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/EventsCalendar/results.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="4" selection-start="99" selection-end="99" vertical-scroll-proportion="0.07326008">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/EventsCalendar/allmyevents.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="41" selection-start="287" selection-end="287" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/EventsCalendar/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="143" column="22" selection-start="5132" selection-end="5132" vertical-scroll-proportion="0.6385542">
+        <state line="146" column="11" selection-start="5227" selection-end="5227" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/EventsCalendar/details.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="168" selection-end="168" vertical-scroll-proportion="0.10989011">
           <folding />
         </state>
       </provider>

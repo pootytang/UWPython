@@ -8,4 +8,5 @@ urlpatterns = patterns('EventsCalendar.views',
     (r'^search_results/$', 'search_results'),
     (r'^add/(?P<year>\d{4})/(?P<month>\d+)/(?P<day>\d+)$', 'add_event'),
     (r'^add_location/$', 'add_location'),
+    (r'^all_my_events/$', 'all_user_events'),
 )
