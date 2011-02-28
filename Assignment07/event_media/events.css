@@ -1,0 +1,103 @@
+.base_table td {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.base_table th {
+    background-color: steelblue;
+    border: 1px solid;
+}
+
+.month {
+    border: 1px solid;
+}
+
+.month th {
+    background-color: steelblue;
+}
+
+.month td {
+    text-align: right;
+    vertical-align: top;
+}
+
+.day_cell {
+    height: 100%;
+    margin: 25px;
+}
+
+#day {
+    width: 100%;
+    height: 100%;
+}
+
+.mon, .wed, .fri, .sun {
+    background-color: lime;
+}
+
+.tue, .thu, .sat {
+    background-color: navy;
+}
+
+.items {
+    background-color: slategray;
+}
+
+.today {
+    background-color: #4682b4;
+}
+
+#event_items {
+    font-size: 10px;
+    width: 100%;
+    height: 100%;
+    float: right;
+}
+
+/* Pretty up the list tags and the links */
+ul {
+    margin-left: 0;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+a {
+    display: block;
+    padding: 3px;
+    width: 100%;
+    border-bottom: 1px solid white;
+    color: white;
+}
+
+#event_items a:link, #event_items a:visited {
+    background-color: steelblue;
+    color: white;
+    text-decoration: none;
+}
+
+#event_items a:hover {
+    background-color: #369;
+    color: #fff;
+}
+
+/* A little something for the details view */
+.details {
+    width: 40%;
+    padding: 10px;
+}
+
+.details span {
+    background-color: steelblue;
+    border: 1px solid black;
+    text-align: center;
+}
+
+/* For the calendar when there's no day calculated */
+.noday {
+    background-color: slategray;
+}
+
+
+
+
+

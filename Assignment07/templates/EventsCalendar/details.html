@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% block login_logout %}
+    {% if loggedin %}
+        <a href="/accounts/logout/">Logout</a>
+    {% else %}
+        <a href="/accounts/login/">Login</a>
+    {% endif %}
+{% endblock %}
+
+    <div class="details">
+        <ul><span>Event - {{ e }}:</span><br />
+            <li>Date: {{ e.date }}</li>
+            <li>Start Time: {{ e.start_time }}</li>
+            <li>End Time: {{ e.end_time }}</li>
+            {% if e.desc %}
+                <li>Description: {{ e.desc }}</li>
+            {% endif %}
+        </ul>
+
+        <ul><span>Location - {{ l }}:</span><br />
+            <li>Address: {{ l.address }}</li>
+            <li>City: {{ l.city }}</li>
+            <li>State: {{ l.state }}</li>
+            <li>Zip: {{ l.zip_code }}</li>
+            {% if l.desc %}
+                <li>Description: {{ l.desc }}</li>
+            {% endif %}
+        </ul>
+    </div>
+{% endblock %}

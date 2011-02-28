@@ -1,35 +1,25 @@
-# Django settings for Assignment06 project.
+# Django settings for Assignment07 project.
+import os
 
-DEBUG = False
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
-# Added for the django debug toolbar
-INTERNAL_IPS = ('127.0.0.1',)
-def custom_show_toolbar(request):
-    return True # Always show toolbar, for example purposes only.
-
-DEBUG_TOOLBAR_CONFIG = {
-    'INTERCEPT_REDIRECTS': False,
-    'SHOW_TOOLBAR_CALLBACK': custom_show_toolbar,
-    'HIDE_DJANGO_SQL': False,
-    'TAG': 'div',
-}
-
+SOUTH_AUTO_FREEZE_APP = True
 
 ADMINS = (
-    # ('Your Name', 'your_email@domain.com'),
+    # ('Delane Jackson', 'delane.jackson@gmail.com'),
 )
 
 MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
-        'NAME': '/home/delane/UW/Python/UWPython/Python2/Assignment06/polls/polls.sql',                      # Or path to database file if using sqlite3.
-        'USER': '',                      # Not used with sqlite3.
-        'PASSWORD': '',                  # Not used with sqlite3.
-        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
-        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
+        'ENGINE': 'django.db.backends.mysql', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'events',                      # Or path to database file if using sqlite3.
+        'USER': 'django',                      # Not used with sqlite3.
+        'PASSWORD': 'uwpython2',                  # Not used with sqlite3.
+        'HOST': 'localhost',                      # Set to empty string for localhost. Not used with sqlite3.
+        'PORT': '3306',                      # Set to empty string for default. Not used with sqlite3.
     }
 }
 
@@ -60,6 +50,9 @@ USE_L10N = True
 # Example: "/home/media/media.lawrence.com/"
 MEDIA_ROOT = ''
 
+# Absolute location of the directory where the static files will live
+STATIC_FILES_ROOT = os.path.join(os.getcwd(), 'event_media')
+
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
@@ -71,7 +64,7 @@ MEDIA_URL = ''
 ADMIN_MEDIA_PREFIX = '/media/'
 
 # Make this unique, and don't share it with anybody.
-SECRET_KEY = 'f(=p+#hsm+%g##i0!7z+!-gv*ot0a+2t=c064!vn*f0#j(e^6l'
+SECRET_KEY = 'uta%$8*7*0j1i1#6_#er0=w%_6w(5u+n^g*4v+-t3+51a4bxn)'
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
@@ -83,18 +76,14 @@ TEMPLATE_LOADERS = (
 MIDDLEWARE_CLASSES = (
     'django.middleware.common.CommonMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
-    'debug_toolbar.middleware.DebugToolbarMiddleware',
 #    'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
 )
 
-ROOT_URLCONF = 'Assignment06.urls'
+ROOT_URLCONF = 'Assignment07.urls'
 
-TEMPLATE_DIRS = (
-    '/home/delane/UW/Python/UWPython/Python2/Assignment06/templates',
-    '/home/delane/UW/Python/UWPython/Python2/Assignment06/templates/admin',
-)
+TEMPLATE_DIRS = ('/home/delane/UW/Python/UWPython/Python2/Assignment07/templates',)
 
 INSTALLED_APPS = (
     'django.contrib.auth',
@@ -106,6 +95,6 @@ INSTALLED_APPS = (
     'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
-    'Assignment06.polls',
-    'debug_toolbar',
+    'Assignment07.EventsCalendar',
+    'south',
 )
