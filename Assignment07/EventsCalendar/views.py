@@ -141,6 +141,7 @@ def add_location(request):
                 r = HttpResponseRedirect('/events/')
     return r
 
+@login_required
 def all_user_events(request):
     user = request.user
     events = Event.objects.filter(user__id=user.id)
