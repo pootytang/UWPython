@@ -8,7 +8,7 @@
     <div class="details">
         <ul><span>Events for {{ u }}:</span><br />
             {% for event in events %}
-                <li><a href="/events/details/{{ event.id }}">{{ event.title }}</a></li>
+                <li><a href="/events/details/{{ event.id }}">{{ event.title }} - {{ event.date }}</a></li>
             {% endfor %}
         </ul>
     </div>
