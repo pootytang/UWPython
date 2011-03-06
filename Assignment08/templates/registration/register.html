@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Create an account{% endblock %}
+
+{% block content %}
+    <div class="details">
+    <h3><span>Create an account</span></h3>
+
+    <form action="" method="post">
+        <ul>
+            {{ form.as_ul }}
+            <input type="submit" value="Create">
+        </ul>
+    </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block login_logout %}
+    <a href="/accounts/logout/">Logout</a>
+    <a href="/events/all_my_events/">View Your Events</a>
+{% endblock %}
+
+{% block content %}
+
+{{ cal }}
+{% endblock %}

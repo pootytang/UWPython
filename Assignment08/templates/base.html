@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="/event_media/events.css" />
+        <title>Events Calendar</title>
+    </head>
+    <body>
+        {% block login_logout %}{% endblock %}
+        <table class="base_table">
+            <tr>
+                <th>view by MONTH<br /></th>
+                <th>view by YEAR<br /></th>
+                <th>Search by title</th>
+            </tr>
+            <tr>
+                <td>
+                    <form action="/events/month/" method="post">
+                        year (4 digits): <input type="input" name="year" size="4" /><br />
+                        month:
+                        <select name="month">
+                            <option value=1>January</option>
+                            <option value=2>February</option>
+                            <option value=3>March</option>
+                            <option value=4>April</option>
+                            <option value=5>May</option>
+                            <option value=6>June</option>
+                            <option value=7>July</option>
+                            <option value=8>August</option>
+                            <option value=9>September</option>
+                            <option value=10>October</option>
+                            <option value=11>November</option>
+                            <option value=12>December</option>
+                        </select><br />
+                        <input type="submit" name="Go" value="View" />
+                    </form>
+                </td>
+                
+                <td>
+                    <form action="/events/year/" method="post">
+                        Year (4 digits): <input type="input" name="year" size="4" /><br />
+                        Rows (per column): <input type="input" name="rows" size="2" value="3"/><br />
+                        <input type="submit" name="submit" value="View" />
+                    </form>
+                </td>
+
+                <td>
+                    <form action="/events/search_results/" method="post">
+                        Enter Title: <input type="input" name="search" /><br />
+                        <input type="submit" name="submit" value="Search">
+                    </form>
+                </td>
+            </tr>
+        </table>
+        <hr />
+        {% block content %}{% endblock %}
+    </body>
+</html>
