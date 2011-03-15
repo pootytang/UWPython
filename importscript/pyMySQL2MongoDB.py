@@ -17,7 +17,7 @@ for table in ts:
     queries.append(base_query % (table, tmp, table))
 
 # Get a mysql connection
-conn = MySQLdb.connect(host = 'localhost', user='root', passwd='dandp1', db='events')
+conn = MySQLdb.connect(host = 'localhost', user='root', passwd='blahblahblah', db='events')
 cursor = conn.cursor()
 
 # Export all the data in the tables to <table>.csv
