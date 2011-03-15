@@ -203,7 +203,7 @@ class PollDaddyAPI(object):
         """
         logger.info('Parsing UserCode...')
         returnVal = ''
-
+	val = payload
         if type == "JSON":
             if '\\' in payload:
                 val = payload.replace('\\', '\\\\')

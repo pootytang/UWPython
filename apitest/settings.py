@@ -1,6 +1,6 @@
 # Django settings for apitest project.
 
-PD_API_KEY = '67e37610-f575-8528-4ac8-0000523e46e2' #API KEY or User ID
+PD_API_KEY = '6f3d78ff-36b1-77e9-9b72-000053453eca' #API KEY or User ID
 DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 #APPEND_SLASH=False
